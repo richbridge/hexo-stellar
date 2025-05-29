@@ -37,7 +37,7 @@ timeline:
 'friends-circle':
   layout: timeline
   title: 朋友圈动态 / Friends Circle
-  api: https://hexo-circle-of-friends.cubik65536.top/all
+  api: https://f.richfan.site/all
   type: fcircle
   limit: 8
 
