@@ -331,8 +331,9 @@ footer:
     #   - '[关于本站](/)'
     #   - '[GitHub](/)'
   content: | # 支持 Markdown 格式
-    本站由 [{author.name}](/) 使用 [{theme.name} {theme.version}]({theme.tree}) 主题创建。
-    本博客所有文章除特别声明外，均采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议，转载请注明出处。
+    Copyright © 2020-2025 Rich 保留所有权利。
+  # 本站由 [{author.name}](/) 使用 [{theme.name} {theme.version}]({theme.tree}) 主题创建。
+  # 本博客所有文章除特别声明外，均采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议，转载请注明出处。
   # 主题用户越多，开发者维护和更新的积极性就越高，如果您喜欢本主题，请在适当的位置显示主题信息和仓库链接以表支持。
 
 
@@ -592,10 +593,10 @@ style:
     code: 85% # 相较于其所在行的文本大小，建议用百分比
     codeblock: 0.8125rem # 13px
   font-family:
-    logo: '"LXGW WenKai Mono TC", system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif'
-    body: '"LXGW WenKai Mono TC", system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif'
-    code: '"LXGW WenKai Mono TC", Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif'
-    codeblock: '"LXGW WenKai Mono TC", Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif'
+    logo: '"LXGW WenKai TC", system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif'
+    body: '"LXGW WenKai TC", system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif'
+    code: '"LXGW WenKai TC", Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif'
+    codeblock: '"LXGW WenKai TC", Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif'
   text-align: left
   prefix:
     h2: https://api.iconify.design/ci:heading-h2.svg
@@ -660,5 +661,5 @@ api_host:
 
 inject:
   head:
-    - <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&display=swap" rel="stylesheet">
+    - <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap" rel="stylesheet">
   script:
