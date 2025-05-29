@@ -1,6 +1,7 @@
 ---
 layout: wiki
 wiki: explore
+menu_id: explore
 title: "Git 提交信息格式"
 comments: false
 ---

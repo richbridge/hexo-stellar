@@ -2,6 +2,7 @@
 layout: wiki
 wiki: explore
 title: 笔记
+menu_id: explore
 comments: false
 ---
 

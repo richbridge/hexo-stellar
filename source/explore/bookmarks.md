@@ -1,6 +1,7 @@
 ---
 layout: wiki
 wiki: explore
+menu_id: explore
 title: 网址收藏
 comments: false
 ---
