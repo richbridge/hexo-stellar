@@ -1,5 +1,5 @@
 name: 笔记
-title: Notebook
+title: notebook
 icon: https://gcore.jsdelivr.net/gh/cdn-x/wiki@1.0.2/git/icon.svg
 description: 这是一本用来演示的笔记本
 base_dir: /notebooks/
@@ -10,7 +10,7 @@ order_by: -updated
 license: true
 share: true
 
-menu_id: notes
+menu_id: notebooks
 # 笔记列表页的左/右侧栏
 # leftbar: [tagtree, recent]
 # rightbar: []
