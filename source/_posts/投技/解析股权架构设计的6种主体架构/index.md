@@ -5,6 +5,7 @@ cover: https://jsd.cdn.zzko.cn/gh/richbridge/picx-images-hosting@master/thumbnai
 categories: [投技]
 tags: [股权]
 date: 2025-08-15
+author: rich
 ---
 
 什么是股权架构设计的主体架构内容？主体架构模型一般有6种，下面我们分别展开了解这6种基本架构内容。
