@@ -588,7 +588,7 @@ plugins:
     enable: #true # hexo-renderer-markdown-it-plus 默认开启 katex，此选项仅用于引入样式
     inject: |
       <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.16/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
-      <script defer src="https://umami.252262.xyz/script.js" data-website-id="25db562b-b061-421b-b53b-8ff117f0ecf4"></script>
+      - <script defer src="https://umami.252262.xyz/script.js" data-website-id="25db562b-b061-421b-b53b-8ff117f0ecf4"></script>
   
   # MathJax
   # 需在Markdown文件开头加入mathjax: true
