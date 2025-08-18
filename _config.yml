@@ -97,6 +97,10 @@ ignore:
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
+inject:
+  head:
+    - <script defer src="https://umami.252262.xyz/script.js" data-website-id="58a7e179-388d-4ede-b2b2-2ee0ce84fe39"></script>
+
 ## Themes: https://hexo.io/themes/
 theme: stellar
 
