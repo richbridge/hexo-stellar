@@ -57,8 +57,8 @@ menubar:
     - id: explore
       theme: '#FA6400'
       icon: solar:planet-bold-duotone
-      title: 探索
-      url: /explore/
+      title: 笔记
+      url: /notebooks/
     - id: social
       theme: '#F44336'
       icon: solar:chat-square-like-bold-duotone
@@ -73,7 +73,7 @@ site_tree:
   # 主页配置
   home:
     leftbar: welcome, recent
-    rightbar: 
+    rightbar: timeline, tagcloud
   # 博客列表页配置
   index_blog:
     base_dir: blog # 只影响自动生成的页面路径
