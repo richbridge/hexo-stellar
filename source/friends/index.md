@@ -19,10 +19,10 @@ giscus:
 {% navbar active:/friends/ [友链](/friends/) [关于](/about/) %}
 {% endbanner %}
 
-{% friends api:https://raw.github.xaox.cc/xaoxuu/friends/output/v2/data.json %}
+{% friends api:https://raw.githubusercontent.com/richbridge/friends/refs/heads/output/v2/data.json %}
 
 {% box [2023-12] 友链失联了怎么办? %}
-添加友链后如果网站长期无法访问，可能会被取消友链！如果您的网站恢复了，可以在申请友链时创建的那条 [issue](https://github.com/xaoxuu/friends/issues) 中评论告知。
+添加友链后如果网站长期无法访问，可能会被取消友链！如果您的网站恢复了，可以在申请友链时创建的那条 [issue](https://github.com/richbridge/friends/issues) 中评论告知。
 {% endbox %}
 
 {% quot icon:hashtag 朋友们近期的文章 %}
@@ -52,7 +52,7 @@ giscus:
 
 <!-- node 第一步：新建 Issue -->
 
-新建 [GitHub Issue](https://github.com/xxx/friends/issues/) 按照模板格式填写并提交。
+新建 [GitHub Issue](https://github.com/richbridge/friends/issues/) 按照模板格式填写并提交。
 
 为了提高图片加载速度，建议优化头像：
 1. 打开 [压缩图](https://www.yasuotu.com/) 上传自己的头像，将图片尺寸调整到 `144px` 后下载。

@@ -8,5 +8,5 @@ comments: false
 nav_tabs: true
 ---
 
-{% timeline type:fcircle api:https://raw.github.xaox.cc/xaoxuu/friends-rss-generator/output/data.json %}
+{% timeline type:fcircle api:https://friends.252262.xyz/all %}
 {% endtimeline %}
