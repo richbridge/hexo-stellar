@@ -3,7 +3,7 @@ robots: 'index,nofollow'
 menu_id: social
 title: 关于
 h1: ''
-leftbar: [sociallist, welcome, recent]
+sidebar: [sociallist, welcome, recent]
 comment_title: 来过，就留下您的脚印吧～
 logo:
   subtitle: 来过，就留下您的脚印吧～
