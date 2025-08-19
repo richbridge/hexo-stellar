@@ -25,9 +25,11 @@ giscus:
 添加友链后如果网站长期无法访问，可能会被取消友链！如果您的网站恢复了，可以在申请友链时创建的那条 [issue](https://github.com/richbridge/friends/issues) 中评论告知。
 {% endbox %}
 
+{% friends posts:true api:https://raw.githubusercontent.com/richbridge/friends/refs/heads/output/v2/data.json %}
+
 {% quot icon:hashtag 朋友们近期的文章 %}
 
-{% timeline type:fcircle limit:10 api:https://raw.github.xaox.cc/xaoxuu/friends-rss-generator/output/data.json %}
+{% timeline type:fcircle limit:10 api:https://friends.252262.xyz/all %}
 {% endtimeline %}
 
 {% quot icon:hashtag 如何交换友链？ %}
