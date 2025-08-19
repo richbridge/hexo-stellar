@@ -1,7 +1,7 @@
 name: 笔记
-title: notebook
+title: 第一篇笔记
 icon: https://gcore.jsdelivr.net/gh/cdn-x/wiki@1.0.2/git/icon.svg
-description: 这是一本用来演示的笔记本
+description: 这是第一个笔记本
 base_dir: /notebooks/
 
 sort: 1
