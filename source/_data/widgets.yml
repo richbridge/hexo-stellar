@@ -1,3 +1,24 @@
+welcome:
+  layout: markdown
+  title: 欢迎欢迎
+  linklist: # 与 linklist 组件写法相同
+    columns: 1 
+    items:
+      - icon:
+        title: 
+        url:
+  content: |
+    欢迎来到 [樊尘刹记](https://richfan.eu.org/)，祝您使用愉快！
+    <br>
+    **第一步**
+    创建 `blog/_config.stellar.yml` 文件，在此文件中填写需要自定义的主题配置。
+    <br>
+    **第二步**
+    创建 `blog/source/_data/widgets.yml` 文件，此文件中填写需要自定义的侧边栏组件，例如 `welcome` 组件。
+    <br>
+    如果有任何疑问，请先查阅文档，如果文档中没有提供，请提向开发者询问。
+  src: # 可以设置外部 md 文件链接
+
 timeline:
   layout: timeline
   title: 近期动态
