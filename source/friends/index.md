@@ -29,7 +29,7 @@ giscus:
 
 {% quot icon:hashtag 朋友们近期的文章 %}
 
-{% timeline type:fcircle limit:10 api:https://friends.252262.xyz/all %}
+{% timeline type:fcircle limit:10 api:https://fc.liushen.fun/all.json %}
 {% endtimeline %}
 
 {% quot icon:hashtag 如何交换友链？ %}

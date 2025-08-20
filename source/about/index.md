@@ -89,16 +89,3 @@ API 不兼容，吐了🤮，升级还是蛮难受的。
 [![十年之约](https://img.foreverblog.cn/logo_en_default.png)](https://www.foreverblog.cn/about.html)
 
 ![在下真名](https://s2.ax1x.com/2019/07/02/ZJ7KAO.gif)
-
-
-{% tabs active:1 align:center %}
-
-<!-- tab 加个微信吧 -->
-
-![https://ospy.shan333.cn/blog/wechat_qrcode.png](https://ospy.shan333.cn/blog/wechat_qrcode.png)
-
-<!-- tab 加个QQ吧 -->
-
-![https://ospy.shan333.cn/blog/qq_qrcode.jpg](https://ospy.shan333.cn/blog/qq_qrcode.jpg)
-
-{% endtabs %}
