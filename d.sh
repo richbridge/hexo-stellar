@@ -1,12 +1,12 @@
 #! /bin/bash
 
-echo -e "--------------------Deploy Begin --------------------"
+# echo -e "--------------------Deploy Begin --------------------"
 
-echo -e "-------------------Step 1 Generate-------------------"
+# echo -e "-------------------Step 1 Generate-------------------"
 
-hexo bangumi -u && hexo algolia
+# hexo bangumi -u && hexo algolia
 
-for i in {1..3}; do echo -e "\n" ; done
+# for i in {1..3}; do echo -e "\n" ; done
 
 echo -e "-------------------Step 2 Update-------------------"
 
