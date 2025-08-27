@@ -51,3 +51,14 @@ welcome:
     欢迎来到 [樊尘刹记](https://richfan.eu.org/) ，祝您使用愉快！
     如有任何疑问，请查阅文档或向开发者询问。
   src:  # 可以设置外部 md 文件链接
+
+notebooks_list:
+  layout: linklist
+  columns: 1 
+  items:
+    - icon: '<svg...></svg>' # 或者 icons.yml 中设置的 icon 名称
+      title: 友情链接
+      url: /friends/
+    - icon: '<svg...></svg>' # 或者 icons.yml 中设置的 icon 名称
+      title: 关于本站
+      url: /about/

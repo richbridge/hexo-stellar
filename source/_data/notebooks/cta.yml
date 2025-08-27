@@ -1,0 +1,20 @@
+name: cta
+title: 税务师
+icon: /notes/cta/china certified tax agents association.png
+description: 税务师
+
+base_dir: /notes/
+
+sort: 1
+per_page: 10
+order_by: -updated
+license: true
+share: true
+
+leftbar: tree, tagtree, related, recent # recent of current notebook
+rightbar: welcome
+
+tree:
+  '笔记开始':
+    - cta/index # 会被关联到 /wiki/stellar/index.md
+    - cta/examples # 会被关联到 /wiki/stellar/examples.md

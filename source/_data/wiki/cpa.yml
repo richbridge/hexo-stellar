@@ -1,0 +1,45 @@
+name: cpa
+title: 注册会计师
+subtitle: '每个人的独立博客 | Designed by xaoxuu'
+tags: 注册会计师
+icon: https://res.xaox.cc/gh/cdn-x/wiki@main/stellar/icon.svg
+cover: https://res.xaox.cc/gh/cdn-x/wiki@main/stellar/icon.svg
+description: 注册会计师归纳总结文档。
+repo: richbridge/richbridge
+search:
+  filter: /wiki/cpa/
+  placeholder: 在 注册会计师 中搜索...
+leftbar: 
+  - tree
+comment_title: '评论区仅供交流，有问题请提 [issue](https://github.com/richbridge/hexo-stellar/issues) 反馈。'
+comments:
+  service: giscus
+  giscus:
+    data-repo: richbridge/hexo-stellar
+    data-mapping: 
+    data-term: 
+base_dir: /wiki/cpa/
+tree:
+  '快速开始':
+    - index # 会被关联到 /wiki/stellar/index.md
+    - examples # 会被关联到 /wiki/stellar/examples.md
+    - releases
+  '基本使用':
+    - theme-settings
+    - pages
+    - sidebar
+    - tag-plugins
+    - tag-plugins/express
+    - tag-plugins/data
+    - tag-plugins/container
+    - comments
+  '文档系统':
+    - wiki-settings
+  '进阶玩法':
+    - widgets
+    - advanced-settings
+    - notes
+  '技术支持':
+    - articles
+    - todo
+    - contributors
