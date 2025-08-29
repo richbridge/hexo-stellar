@@ -11,7 +11,7 @@ order_by: -updated
 license: true
 share: true
 
-leftbar: tree, tagtree, related, recent # recent of current notebook
+leftbar: notebooks_list, tree, tagtree, related, recent # recent of current notebook
 rightbar: welcome
 
 tree:
