@@ -16,7 +16,7 @@ header: false
 indent: true
 ---
 
-{% banner richfan 简介 bg:https://raw.githubusercontent.com/richbridge/richbridge.github.io/master/logo/bg.avif avatar:https://raw.githubusercontent.com/richbridge/richbridge.github.io/master/logo/avatar.avif %}
+{% banner richfan 简介 bg:https://cdn.jsdelivr.net/gh/richbridge/picx-images-hosting@master/logo/bg.avif avatar:https://cdn.jsdelivr.net/gh/richbridge/picx-images-hosting@master/logo/avatar.avif %}
 {% navbar active:/about/ [友链](/friends/) [关于](/about/) %}
 {% endbanner %}
 
