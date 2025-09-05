@@ -218,7 +218,7 @@ search:
 
 ######## Comments ########
 comments:
-  service: giscus # beaudar, utterances, giscus, twikoo, waline, artalk
+  service: twikoo # beaudar, utterances, giscus, twikoo, waline, artalk
   comment_title: 快来参与讨论吧~
   lazyload: false # true / false
   custom_css: # artalk,twikoo,... 可以为没有全局启用的评论加载自定义样式
@@ -265,7 +265,7 @@ comments:
   # https://twikoo.js.org/
   twikoo:
     js: https://gcore.jsdelivr.net/npm/twikoo@1.6/dist/twikoo.all.min.js # 建议锁定版本
-    envId: https://xxx # vercel函数
+    envId: https://twikoo.252262.xyz # vercel函数
 
   # Waline
   # https://waline.js.org/
@@ -274,7 +274,7 @@ comments:
     css: https://gcore.jsdelivr.net/npm/@waline/client@3.1/dist/waline.css
     meta_css: https://gcore.jsdelivr.net/npm/@waline/client@3.1/dist/waline-meta.css
     # Waline server address url, you should set this to your own link
-    serverURL: https://waline.vercel.app
+    serverURL: https://waline.262252.xyz
     # If false, comment count will only be displayed in post page, not in home page
     commentCount: true
     # Pageviews count, Note: You should not enable both `waline.pageview` and `leancloud_visitors`.

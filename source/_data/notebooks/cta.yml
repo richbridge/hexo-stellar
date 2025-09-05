@@ -13,8 +13,3 @@ share: true
 
 leftbar: notebooks_list, tree, tagtree, related, recent # recent of current notebook
 rightbar: welcome
-
-tree:
-  '笔记开始':
-    - cta/index # 会被关联到 /wiki/stellar/index.md
-    - cta/examples # 会被关联到 /wiki/stellar/examples.md

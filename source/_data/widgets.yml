@@ -52,6 +52,8 @@ welcome:
     如有任何疑问，请查阅文档或向开发者询问。
   src:  # 可以设置外部 md 文件链接
 
+
+# 笔记相关
 notebooks_list:
   layout: linklist
   columns: 1 

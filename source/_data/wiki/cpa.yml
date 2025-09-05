@@ -21,8 +21,8 @@ comments:
 base_dir: /wiki/cpa/
 tree:
   '快速开始':
-    - index # 会被关联到 /wiki/stellar/index.md
-    - examples # 会被关联到 /wiki/stellar/examples.md
+    - index # 会被关联到 /wiki/cpa/index.md
+    - examples # 会被关联到 /wiki/cpa/examples.md
     - releases
   '基本使用':
     - theme-settings
