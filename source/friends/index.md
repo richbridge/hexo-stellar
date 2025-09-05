@@ -15,7 +15,7 @@ giscus:
   data-term: 0
 ---
 
-{% banner 小伙伴们 如果宇宙中真有什么终极的逻辑，那就是我们终有一天会在舰桥上重逢，直到生命终结。 bg:https://jsd.cdn.zzko.cn/gh/richbridge/picx-images-hosting@master/logo/bg.avif %}
+{% banner 小伙伴们 如果宇宙中真有什么终极的逻辑，那就是我们终有一天会在舰桥上重逢，直到生命终结。 bg:https://cdn.jsdelivr.net/gh/richbridge/picx-images-hosting@master/logo/bg.avif %}
 {% navbar active:/friends/ [友链](/friends/) [关于](/about/) %}
 {% endbanner %}
 
