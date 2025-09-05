@@ -11,35 +11,8 @@ search:
   placeholder: 在 注册会计师 中搜索...
 leftbar: 
   - tree
-comment_title: '评论区仅供交流，有问题请提 [issue](https://github.com/richbridge/hexo-stellar/issues) 反馈。'
-comments:
-  service: giscus
-  giscus:
-    data-repo: richbridge/hexo-stellar
-    data-mapping: 
-    data-term: 
 base_dir: /wiki/cpa/
 tree:
   '快速开始':
     - index # 会被关联到 /wiki/cpa/index.md
     - examples # 会被关联到 /wiki/cpa/examples.md
-    - releases
-  '基本使用':
-    - theme-settings
-    - pages
-    - sidebar
-    - tag-plugins
-    - tag-plugins/express
-    - tag-plugins/data
-    - tag-plugins/container
-    - comments
-  '文档系统':
-    - wiki-settings
-  '进阶玩法':
-    - widgets
-    - advanced-settings
-    - notes
-  '技术支持':
-    - articles
-    - todo
-    - contributors
