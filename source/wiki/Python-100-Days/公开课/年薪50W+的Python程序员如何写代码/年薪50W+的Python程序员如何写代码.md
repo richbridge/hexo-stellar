@@ -367,7 +367,7 @@ for page in range(10):
 
 > **利用NumPy、Pandas、Matplotlib可以轻松实现数据分析和可视化**。
 
-![](res/use-pandas-in-jupyter-notebook.png)
+<img src="../res/use-pandas-in-jupyter-notebook.png" style="zoom:20%;">
 
 ### 写出Python代码的正确姿势
 
@@ -762,7 +762,7 @@ Line #    Mem usage    Increment   Line Contents
 
 5. 任何行动都比不采取行动好
 
-   ![](res/action.png)
+   <img src="../res/action.png" style="zoom:20%;">
 
 
 #### 好书推荐

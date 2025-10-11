@@ -819,7 +819,7 @@ Python在以下领域都有用武之地。
      > - **客户合作** 高于 合同谈判
      > - **响应变化** 高于 遵循计划
 
-     ![](./res/agile-scrum-sprint-cycle.png)
+     <img src="../res/agile-scrum-sprint-cycle.png" style="zoom:20%;">
 
      > 角色：产品所有者（决定做什么，能对需求拍板的人）、团队负责人（解决各种问题，专注如何更好的工作，屏蔽外部对开发团队的影响）、开发团队（项目执行人员，具体指开发人员和测试人员）。
 
@@ -837,7 +837,7 @@ Python在以下领域都有用武之地。
 
    - 编程规范和代码审查（`flake8`、`pylint`）
 
-     ![](./res/pylint.png)
+     <img src="../res/pylint.png" style="zoom:20%;">
 
    - Python中的一些“惯例”（请参考[《Python惯例-如何编写Pythonic的代码》](./番外篇/Python编程惯例.md)）
 
@@ -871,7 +871,7 @@ Python在以下领域都有用武之地。
    - 模块划分：画思维导图（XMind），每个模块是一个枝节点，每个具体的功能是一个叶节点（用动词表述），需要确保每个叶节点无法再生出新节点，确定每个叶子节点的重要性、优先级和工作量。
    - 任务分配：由项目负责人根据上面的指标为每个团队成员分配任务。
 
-   ![](./res/requirements_by_xmind.png)
+   <img src="../res/requirements_by_xmind.png" style="zoom:20%;">
 
 3. 制定项目进度表（每日更新）
 
@@ -897,7 +897,7 @@ Python在以下领域都有用武之地。
 
   - 使用PowerDesigner绘制物理模型图。
 
-    ![](./res/power-designer-pdm.png)
+    <img src="../res/power-designer-pdm.png" style="zoom:20%;">
 
   - 通过数据表创建模型（反向工程），例如在Django项目中可以通过下面的命令生成模型。
 

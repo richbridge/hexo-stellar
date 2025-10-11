@@ -168,7 +168,7 @@ ipython最直观的优点：
 
 1. 安装requests库。（点击常看[官方文档](<https://2.python-requests.org/zh_CN/latest/>)）
 
-   ![](./res/requests.png)
+   <img src="../res/requests.png" style="zoom:20%;">
 
    ```Shell
    pip install requests
