@@ -1,0 +1,18 @@
+name: Python-100-Days
+title: Python - 100天从新手到大师
+subtitle: '每个人的独立博客 | Designed by xaoxuu'
+tags: 注册会计师
+icon: https://res.xaox.cc/gh/cdn-x/wiki@main/stellar/icon.svg
+cover: https://res.xaox.cc/gh/cdn-x/wiki@main/stellar/icon.svg
+description: 注册会计师归纳总结文档。
+repo: richbridge/richbridge
+search:
+  filter: /wiki/cpa/
+  placeholder: 在 注册会计师 中搜索...
+leftbar: 
+  - tree
+base_dir: /wiki/cpa/
+tree:
+  '快速开始':
+    - index # 会被关联到 /wiki/cpa/index.md
+    - examples # 会被关联到 /wiki/cpa/examples.md
