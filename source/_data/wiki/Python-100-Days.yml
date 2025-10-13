@@ -13,6 +13,10 @@ leftbar:
   - tree
 base_dir: /wiki/Python-100-Days/
 tree:
+  '目录':
+    - index
+    - Python学习资源汇总
+    - 更新日志
   'Day01-20':
     - Day01-20/01.初识Python
     - Day01-20/02.第一个Python程序
