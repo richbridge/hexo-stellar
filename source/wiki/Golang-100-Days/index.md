@@ -19,7 +19,7 @@ wiki: Golang-100-Days
 
 
 
-<img src="../img/WechatIMG724_meitu_2.jpg" alt="WechatIMG723_meitu_1">
+<img src="./img/WechatIMG724_meitu_2.jpg" alt="WechatIMG723_meitu_1">
 
 
 

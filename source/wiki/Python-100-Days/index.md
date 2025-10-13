@@ -10,7 +10,7 @@ wiki: Python-100-Days
 >
 > **说明**：如果访问 GitHub 比较慢的话，可以关注我的知乎号（[**Python-Jack**](https://www.zhihu.com/people/jackfrued)），上面的[“**从零开始学Python**”](<https://zhuanlan.zhihu.com/c_1216656665569013760>)专栏（对应本项目前 20 天的内容）比较适合初学者，其他的专栏如“[**数据思维和统计思维**](https://www.zhihu.com/column/c_1620074540456964096)”、“[**基于Python的数据分析**](https://www.zhihu.com/column/c_1217746527315496960)”、“[**说走就走的AI之旅**](https://www.zhihu.com/column/c_1628900668109946880)”等也在持续创作和更新中，欢迎大家关注、点赞和评论。如果希望免费学习打卡或者参与问题讨论，可以加入下面的 QQ 交流群（三个群加一个即可），请不要重复加群，也不要在群里发布广告和其他色情、低俗或敏感内容。如果有付费学习或付费咨询的需求，可以添加我的私人微信（微信号：**jackfrued**），备注好自己的称呼和需求，我会为大家提供力所能及的帮助。
 >
-> <img src="../res/python_study_qq_group.png">
+> <img src="./res/python_study_qq_group.png">
 >
 > 本项目对应的部分视频已经同步到 [Bilibili](https://space.bilibili.com/1177252794)，有兴趣的小伙伴可以点赞、投币、关注，一键三连支持一下！
 
@@ -819,7 +819,7 @@ Python在以下领域都有用武之地。
      > - **客户合作** 高于 合同谈判
      > - **响应变化** 高于 遵循计划
 
-     <img src="../res/agile-scrum-sprint-cycle.png">
+     <img src="./res/agile-scrum-sprint-cycle.png">
 
      > 角色：产品所有者（决定做什么，能对需求拍板的人）、团队负责人（解决各种问题，专注如何更好的工作，屏蔽外部对开发团队的影响）、开发团队（项目执行人员，具体指开发人员和测试人员）。
 
@@ -837,7 +837,7 @@ Python在以下领域都有用武之地。
 
    - 编程规范和代码审查（`flake8`、`pylint`）
 
-     <img src="../res/pylint.png">
+     <img src="./res/pylint.png">
 
    - Python中的一些“惯例”（请参考[《Python惯例-如何编写Pythonic的代码》](./番外篇/Python编程惯例)）
 
@@ -871,7 +871,7 @@ Python在以下领域都有用武之地。
    - 模块划分：画思维导图（XMind），每个模块是一个枝节点，每个具体的功能是一个叶节点（用动词表述），需要确保每个叶节点无法再生出新节点，确定每个叶子节点的重要性、优先级和工作量。
    - 任务分配：由项目负责人根据上面的指标为每个团队成员分配任务。
 
-   <img src="../res/requirements_by_xmind.png">
+   <img src="./res/requirements_by_xmind.png">
 
 3. 制定项目进度表（每日更新）
 
@@ -897,7 +897,7 @@ Python在以下领域都有用武之地。
 
   - 使用PowerDesigner绘制物理模型图。
 
-    <img src="../res/power-designer-pdm.png">
+    <img src="./res/power-designer-pdm.png">
 
   - 通过数据表创建模型（反向工程），例如在Django项目中可以通过下面的命令生成模型。
 
