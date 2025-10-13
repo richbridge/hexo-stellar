@@ -102,7 +102,7 @@ Go语言中有对应的实现Protobuf协议的库，Github地址：[https://gith
 使用Go语言的Protobuf库之前，需要相应的环境准备：
 * **1、安装protobuf编译器。**
 可以在如下地址：[https://github.com/protocolbuffers/protobuf/releases](https://github.com/protocolbuffers/protobuf/releases)选择适合自己系统的Proto编译器程序进行下载并解压，如图：
-![Protoc编译器](./img/WX20190605-095735@2x.png)
+<img src=".././img/WX20190605-095735@2x.png" alt="Protoc编译器">
 
 * **2、配置环境变量**
 protoc编译器正常运行需要进行环境变量配置，将protocke执行文件所在目录添加到当前系统的环境变量中。windows系统下可以直接在Path目录中进行添加；macOS系统下可以将protoc可执行文件拷贝至**/usr/local/include**目录下。具体的对应的系统的环境变量配置可以阅读解压后与bin目录同级的readme.txt的文件内容。
@@ -112,10 +112,10 @@ protoc编译器正常运行需要进行环境变量配置，将protocke执行文
 ```
 go get github.com/golang/protobuf/protoc-gen-go
 ```
-![protoc安装后](./img/protobuf.png)
+<img src=".././img/protobuf.png" alt="protoc安装后">
 
 安装完成以后，protoc-gen-go*可执行文件在本地环境GOPATH/bin目录下，如下图所示：
-![protoc-gen-go执行文件](./img/WX20190604-155039@2x.png)
+<img src=".././img/WX20190604-155039@2x.png" alt="protoc-gen-go执行文件">
 
 ### 2.3、Protobuf 协议语法
 
@@ -163,7 +163,7 @@ Order消息格式有3个字段，在消息中承载的数据分别对应每一�
     protoc --go_out = . test.proto
     ```
 执行 protoc --go_out=. test.proto 生成对应的 person.pb.go 文件。并构建对应的example目录，存放生成的person.pb.go文件。
-![Proto生成Go语言](http://7xtcwd.com1.z0.glb.clouddn.com/WX20190605-101438@2x.png)
+<img src="../http://7xtcwd.com1.z0.glb.clouddn.com/WX20190605-101438@2x.png" alt="Proto生成Go语言">
 
 * 3、在程序中使用Protobuf
 在程序中有如下代码：
@@ -207,7 +207,7 @@ func main() {
     ```
     
 * **3、执行程序**
-![运行程序](http://7xtcwd.com1.z0.glb.clouddn.com/WX20190605-102000@2x.png)
+<img src="../http://7xtcwd.com1.z0.glb.clouddn.com/WX20190605-102000@2x.png" alt="运行程序">
 
 ## 三、Protobuf 协议语法与原理实现
 
@@ -314,12 +314,12 @@ Protobuf 序列化后所生成的二进制消息非常紧凑，这得益于 Prot
 Varint是一种紧凑的表示数字的方法。它用一个或多个字节来表示一个数字，值越小的数字使用越少的字节数。这能减少用来表示数字的字节数。
 
 Varint中的每个byte的最高位bit有特殊的含义，如果该位为1，表示后续的byte也是该数字的一部分，如果该位为0，则结束。其他的7个bit都用来表示数字。因此小于128的数字都可以用一个byte表示。大于128的数字，比如300，会用两个字节来表示：1010 1100 0000 0010。下图演示了 Google Protocol Buffer 如何解析两个bytes。注意到最终计算前将两个byte的位置相互交换过一次，这是因为 Google Protocol Buffer 字节序采用little-endian的方式。
-![小端位序排列的Varint编码](./img/121732zuyzkxzxjkwwjkx5.jpg)
+<img src=".././img/121732zuyzkxzxjkwwjkx5.jpg" alt="小端位序排列的Varint编码">
 
 在序列化时，Protobuf按照TLV的格式序列化每一个字段，T即Tag，也叫Key；V是该字段对应的值value；L是Value的长度，如果一个字段是整形，这个L部分会省略。 
 
 序列化后的Value是按原样保存到字符串或者文件中，Key按照一定的转换条件保存起来，序列化后的结果就是 KeyValueKeyValue…依次类推的样式，示意图如下所示：
-![序列化格式](./img/121758l5mln3mnvpvc4mzw.jpg)
+<img src=".././img/121758l5mln3mnvpvc4mzw.jpg" alt="序列化格式">
 
 采用这种Key-Pair结构无需使用分隔符来分割不同的Field。对于可选的Field，如果消息中不存在该field，那么在最终的Message Buffer中就没有该field，这些特性都有助于节约消息本身的大小。比如，我们有消息order1:
 
@@ -336,4 +336,4 @@ Key 的定义如下：
 ```
 可以看到 Key 由两部分组成。第一部分是 field_number，比如消息lm.helloworld中field id 的field_number为1。第二部分为wire_type。表示 Value的传输类型。而wire_type有以下几种类型：
 
-![wire_type类型](./img/WX20190606-174515@2x.png)
+<img src=".././img/WX20190606-174515@2x.png" alt="wire_type类型">

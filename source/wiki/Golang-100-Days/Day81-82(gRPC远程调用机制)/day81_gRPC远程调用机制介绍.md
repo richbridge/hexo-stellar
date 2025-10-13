@@ -25,7 +25,7 @@ gRPC开源库支持诸如：C++，C#，Dart，Go，Java，Node，Objective-C，P
 #### 1.1.4、gRPC调用执行过程
 因为gRPC支持多种语言的实现，因此gRPC支持客户端与服务器在多种语言环境中部署运行和互相调用。多语言环境交互示例如下图所示：
 
-![多语言环境交互示例](./img/WX20190802-154324@2x.png)
+<img src=".././img/WX20190802-154324@2x.png" alt="多语言环境交互示例">
 
 gRPC中默认采用的数据格式化方式是protocol buffers。关于protocol buffers相关的知识和联系，在前面的课程内容中已经有涉及，此处不再赘述。
 
@@ -64,7 +64,7 @@ git clone https://github.com/grpc/grpc-go.git $GOPATH/src/google.golang.org/grpc
 
 ##### 1.2.3.5 案例演示
 通过查看examples目录下的helloworld项目，并分别依次执行greeter_server中的main.go程序和greeter_client中的main.go程序。可以查看到运行结果。项目目录和运行效果如下所示：
-![示例程序及执行结果](./img/WX20190802-173309@2x.png)
+<img src=".././img/WX20190802-173309@2x.png" alt="示例程序及执行结果">
 
 ## 二、gRPC框架使用
 上节课已经学习了gRPC基本知识，对gRPC有了初步的认识。本节课通过编程实现gRPC编程。

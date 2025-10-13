@@ -19,7 +19,7 @@ wiki: Golang-100-Days
 
 然而在现在流行的基于云平台的微服务应用中， 有更多如下图所示的困难问题需要去解决：
 
-![微服务架构部署模式](./img/WX20190609-150311@2x.png)
+<img src=".././img/WX20190609-150311@2x.png" alt="微服务架构部署模式">
 
 服务实例需要动态分配网络地址，而且，一组服务实例可能会因为自动扩展、失败或者升级发生动态变化，因此客户端代码应该使用更加精细的服务发现机制。
 
@@ -28,10 +28,10 @@ wiki: Golang-100-Days
 ### 1.2、客户端发现模式
 当我们使用客户端发现的时候，客户端负责决定可用服务实例的网络地址并且在集群中对请求负载均衡, 客户端访问**服务登记表**，也就是一个可用服务的数据库，然后客户端使用一种负载均衡算法选择一个可用的服务实例然后发起请求。该模式如下图所示：
 
-![客户端发现模式](./img/WX20190609-150816@2x.png)
+<img src=".././img/WX20190609-150816@2x.png" alt="客户端发现模式">
 
 该模式和我们之前在微服务简介章节介绍的服务发现机制中的客户端机制是一样的，如图所示：
-![基于客户端的服务注册与发现](./img/WX20190530-173138@2x.png)
+<img src=".././img/WX20190530-173138@2x.png" alt="基于客户端的服务注册与发现">
 
 服务实例的网络地址在服务启动的时候被登记到服务注册表中 ，当实例终止服务时从服务注册表中移除。服务实例的注册一般是通过**心跳机制**阶段性的进行刷新。
 
@@ -45,7 +45,7 @@ wiki: Golang-100-Days
 ### 1.3、服务端发现模式
 与客户端发现模式对应的，另外一种服务发现模式称之为服务端发现模式，整体架构如下：
 
-![服务端发现模式](./img/WX20190609-153629@2x.png)
+<img src=".././img/WX20190609-153629@2x.png" alt="服务端发现模式">
 
 在该种模式下，客户端通过一个负载均衡器向服务发送请求，负载均衡器查询服务注册表并把请求路由到一台可用的服务实例上。和客户端发现一样，服务实例通过服务注册表进行服务的注册和注销。
 
@@ -72,13 +72,13 @@ wiki: Golang-100-Days
 
 * **self-registration模式：**这种模式下，服务实例自己负责通过服务注册表对自己进行注册和注销，另外如何有必要的话，服务实例可以通过发送心跳包请求防止注册过期。该种模式的架构实现如下：
 * 
-    ![服务注册方式](./img/WX20190609-163437@2x.png)
+    <img src=".././img/WX20190609-163437@2x.png" alt="服务注册方式">
     
     **self-registration**模式有一些优势也有一些劣势：优势之一是它相对简单，而且不强制使用其他的系统组件。然而，一个很大的劣势是 它使得服务实例和服务注册表强耦合 ，你必须在每一个使用服务的客户端编程语言和架构代码中实现注册逻辑。
     
 * **third-party registration模式：**当使用third-party registration模式的时候，服务实例本身并不负责通过服务注册表注册自己，相反的，通过另一个被称作service registrar系统组件来处理注册。service registrar通过轮询或者订阅事件来检测一些运行实例的变化，当它检测到一个新的可用服务实例时就把该实例注册到服务注册表中去，service registrar还负责注销已经被终止的服务实例，下图展示了该模式的架构：
     
-    ![third-party registration](./img/WX20190609-163819@2x.png)
+    <img src=".././img/WX20190609-163819@2x.png" alt="third-party registration">
     
     third-party registration模式也有一些优势和劣势：主要优势是使得服务从服务注册表中被解耦，你不必为开发者使用的每种开发语言和框架实现服务注册的逻辑，相反，服务实例的注册被一个专有服务以集中式的方式处理。该模式的劣势是，除非它被内置在部署环境中，不然这又是一个需要被设置和管理的高可用系统组件。
     
@@ -110,7 +110,7 @@ consul是google开源的一个使用go语言开发的服务发现、配置管理
 * **安装：**
 在官方文档中，点击Download按钮，进入下载软件界面[https://www.consul.io/downloads.html](https://www.consul.io/downloads.html)，选择自己本机系统的类型，如下图所示：
 
-![下载Consul](./img/WX20190610-100150@2x.png)
+<img src=".././img/WX20190610-100150@2x.png" alt="下载Consul">
 
 Consul最新版本是v1.5.1版本。
 
@@ -125,7 +125,7 @@ Consul最新版本是v1.5.1版本。
     * Unix系统中：可以拷贝到**~/bin**或**/usr/local/bin**目录下，这两个目录是常见的安装目录。
     * Windows系统：可以将consul安装到**%PATH%**所对应的目录路径中。
     以macOS系统为例，属于unix系统，将consul拷贝到/usr/local/bin目录下，如图所示：
-    ![Consul环境配置](./img/WX20190611-114040@2x.png)
+    <img src=".././img/WX20190611-114040@2x.png" alt="Consul环境配置">
     
 * 3、测试配置成功
 完成consul的环境配置后，即表示已经将consul完成了安装。可以通过在命令行中运行consul指令验证是否安装成功。打开命令行工具，输入如下指令：
@@ -133,13 +133,13 @@ Consul最新版本是v1.5.1版本。
     ```
     consul
     ```
-    ![consul指令](./img/WX20190611-114521@2x.png)
+    <img src=".././img/WX20190611-114521@2x.png" alt="consul指令">
     在终端中输入**consul**指令，出现如上指令用法及参数提示，即表示consul安装成功。
     如果得到的是**-bash: consul: command not found**的错误，则表示**path**没有正确设置，需要重新检查consul可执行文件所在路径是否添加到了环境变量PATH中。
 
 ### 2.2、主从模式分布式系统
 分布式系统中，一遍采用主从模式进行部署，如下图所示：
-![主从模式分布式系统](./img/WX20190613-142516@2x.png)
+<img src=".././img/WX20190613-142516@2x.png" alt="主从模式分布式系统">
 
 ### 2.3、单点故障
 通常分布式系统采用主从模式，就是一个主控机连接多个处理节点。主节点负责分发任务，从节点负责处理任务，当我们的主节点发生故障时，整个系统就瘫痪了。这就是单点故障。
@@ -148,14 +148,14 @@ Consul最新版本是v1.5.1版本。
 
 对应到上文，我们所说的服务注册与发现组件，如果我们引入的服务注册与发现组件出现了问题，则会导致系统乃至整个链路瘫痪，这是不可容忍的。需要采用新的方案解决此问题。
 
-![单点故障](./img/WX20190613-145130@2x.png)
+<img src=".././img/WX20190613-145130@2x.png" alt="单点故障">
 
 ### 2.4、传统解决方案
 传统的解决方案是采用一个备用节点，这个备用节点定期给当前主节点发送ping包，主节点收到ping包以后向备用节点发送回复ACK,当备用节点收到回复时就会认为当前主节点还活着，让他继续提供服务。
-![备用主节点](./img/WX20190613-144656@2x.png)
+<img src=".././img/WX20190613-144656@2x.png" alt="备用主节点">
 
 当主节点停止服务以后，这个时候备用节点收不到回复了，备用主节点认为主节点就宕机了，备用节点会代替主节点成为主节点，如下图：
-![备用节点成为主节点](./img/WX20190613-151156@2x.png)
+<img src=".././img/WX20190613-151156@2x.png" alt="备用节点成为主节点">
 
 但是这种方案有个问题，如果仅仅是网络故障引起的ACK返回延时，这种方案就会面临着同时存在两个主节点的问题。
 
@@ -167,7 +167,7 @@ Raft中的节点总是处于以下三种状态之一: follower、candidate或lea
 ### 2.6、Consul内部原理
 
 我们可以通过如下的原理图来理解Consul的原理：
-![consul的构造原理图](./img/consul.png)
+<img src=".././img/consul.png" alt="consul的构造原理图">
  
 首先Consul支持多数据中心，在上图中有两个DataCenter，他们通过Internet互联，同时请注意为了提高通信效率，只有Server节点才加入跨数据中心的通信。
 
@@ -188,7 +188,7 @@ Server节点有一个Leader和多个Follower，Leader节点会将数据同步到
 ### 3.1、Consul服务发现原理
 使用以下案例进行Consul服务发现原理的讲解，如图所示：
 
-![Consul服务发现原理](./img/WX20190613-173518@2x.png)
+<img src=".././img/WX20190613-173518@2x.png" alt="Consul服务发现原理">
 
 1、**部署集群。**首先需要有一个正常的Consul集群，有Server，有Leader。这里在服务器Server1、Server2、Server3上分别部署了Consul Server。
 
@@ -211,7 +211,7 @@ consul agent -dev
 ```
 在新终端中，执行如上操作。
 
-![consul启动](./img/consul_starting.jpg)
+<img src=".././img/consul_starting.jpg" alt="consul启动">
 
 ```
 hongweiyu@localhost:~$ consul agent -dev
@@ -286,7 +286,7 @@ hongweiyu@localhost:~$ consul agent -dev
 consul members
 ```
 
-![consul的members信息](./img/consul_members.jpg)
+<img src=".././img/consul_members.jpg" alt="consul的members信息">
 
 ```
 Node       Address         Status  Type    Build  Protocol  DC   Segment
@@ -301,13 +301,13 @@ localhost  127.0.0.1:8301  alive   server  1.5.1  2         dc1  <all>
 ### 4.3、UI界面访问
 终端命令行下启动consul的dev模式后，通过members命令查看节点信息，除此以外，还可以使用Http的浏览器访问的模式，查看节点信息。
 consul启动，正常运行后，打开浏览器，在地址栏中键入：http://localhost:8500。可以查看节点信息，如下图：
-![ui查看consul服务信息](./img/WX20190617-163040@2x.png)
+<img src=".././img/WX20190617-163040@2x.png" alt="ui查看consul服务信息">
 
-![ui查看consul节点信息](./img/WX20190617-163306@2x.png)
+<img src=".././img/WX20190617-163306@2x.png" alt="ui查看consul节点信息">
 
 ### 4.4、停止服务
 在节点运行终端中执行：ctrl + c，表示退出节点运行。
-![consul停止节点服务](./img/WX20190617-162215@2x.png)
+<img src=".././img/WX20190617-162215@2x.png" alt="consul停止节点服务">
 
 ```
 2019/06/17 16:21:43 [INFO] agent: Caught signal:  interrupt
@@ -334,4 +334,4 @@ consul启动，正常运行后，打开浏览器，在地址栏中键入：http:
 ### 4.5、consul dev模式示意图
 上诉consul agent -dev模式下的启动与运行consul节点。集群中只包含一个节点，唯一的节点被选举成为Leader节点。
 
-![单节点dev模式示意图](./img/WX20190617-164506@2x.png)
+<img src=".././img/WX20190617-164506@2x.png" alt="单节点dev模式示意图">

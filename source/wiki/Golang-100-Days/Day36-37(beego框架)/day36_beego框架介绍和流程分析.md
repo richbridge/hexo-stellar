@@ -41,7 +41,7 @@ Beego框架的主要特性：
 
 #### 1.2.1 Go语言版本要求
 **【注意】：**在安装的时候，有一点大家要注意，beego框架要求Go 语言版本1.1+以上，这个我们大家的版本应该至少也是1.9的吧，应该都没有。或者大家现在在命令行中，执行go version查看一下自己的go语言版本，如下所示：
-![Go语言版本](./img/WX20190515-154819@2x.png)
+<img src=".././img/WX20190515-154819@2x.png" alt="Go语言版本">
 
 上图显示，本地环境go语言版本就是1.10.4版本。
 
@@ -138,12 +138,12 @@ version命令来查看当前bee，beego，go的版本。
 bee new BeegoDemo2
 ```
 命令执行效果如下：
-![bee新建项目](./img/bee_new.png)
+<img src=".././img/bee_new.png" alt="bee新建项目">
 可以看到，终端中输出了bee的图标和版本，并且打印出了很多日志，创建了很多文件和目录。这就是bee new命令的执行效果，表示新建一个项目。
 
 #### 1.4.2 查看项目结构
 使用我们的开发公局goland来打开新建的BeegoDemo2项目，并查看一下项目目录组织结构：
-![查看项目结构](./img/project_cont.png)
+<img src=".././img/project_cont.png" alt="查看项目结构">
 
 #### 1.4.3 运行新建项目
 现在使用bee命令来运行一下案例，看一下效果。在开发工具下方的terminal中，打开terminal，输入命令：
@@ -153,27 +153,27 @@ bee run
 
 #### 1.4.4 项目运行效果
 运行效果如下：
-![项目运行效果](./img/bee_run.png)
+<img src=".././img/bee_run.png" alt="项目运行效果">
 
 可以看到输出日志说，http服务已经在[http://localhost:8080](http://localhost:8080)端口运行，现在我们去浏览器中验证一下，效果如下：
-![浏览器效果](./img/project_show.png)
+<img src=".././img/project_show.png" alt="浏览器效果">
 
 # 二、beego程序流程分析
 ## 2.1 beego程序流程分析--beego程序入口
 
 Go语言执行的时候是执行main包下面的init函数，main函数依次执行。因此，先找到main.go文件。
-![beego程序入口](./img/main_file.png)
+<img src=".././img/main_file.png" alt="beego程序入口">
 
 如上图就是main.go文件内容，那么代码如何执行呢？首先，import导入了两个包，一个是routers，一个是beego。而在routers包前面，可以看到有一个“_”，这表明是引入routers包，并执行init方法。
 
 ## 2.2 beego程序流程分析--Go语言程序执行顺序
 这里涉及一个知识点，就是Go语言的执行过程，这里给大家一张程序执行流程图：
-![Go语言程序执行顺序](./img/main_init.png)
+<img src=".././img/main_init.png" alt="Go语言程序执行顺序">
 
 ## 2.3 beego程序流程分析--请求拦截与路由分发
 
 根据上图，可以得知程序首先到routers包下执行init方法。到router.go里面看一下具体的代码：
-![router.go程序](./img/router.png)
+<img src=".././img/router.png" alt="router.go程序">
 
 可以看到在router.go文件中有一个init方法，看到beego.Router()这句代码。
 
@@ -181,7 +181,7 @@ Go语言执行的时候是执行main包下面的init函数，main函数依次执
 
 router表示的是路由的意思，这个函数的功能是映射 URL 到 controller，第一个参数是 URL (用户请求的地址)，这里注册的是 /，也就是访问的不带任何参数的 URL，第二个参数是对应的 Controller，即将把请求分发到那个控制器来执行相应的逻辑，现在去这里设置的MainController中去看一下有什么方法：
 
-![控制器](./img/controller.png)
+<img src=".././img/controller.png" alt="控制器">
 
 MainController结构体及函数声明在default.go文件中。而这里就看到一个Get方法，方法中有三行代码。
 

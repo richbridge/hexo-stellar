@@ -19,7 +19,7 @@ wiki: Golang-100-Days
 
 一个指针变量可以指向任何一个值的内存地址它指向那个值的内存地址。
 
- ![pointer1](img/pointer1.png)
+ <img src="../img/pointer1.png" alt="pointer1">
 
 在上面的图中，变量b的值为156，存储在内存地址0x1040a124。变量a持有b的地址，现在a被认为指向b。
 

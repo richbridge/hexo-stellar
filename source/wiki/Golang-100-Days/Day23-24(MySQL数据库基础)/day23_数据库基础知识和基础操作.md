@@ -18,11 +18,11 @@ wiki: Golang-100-Days
 从最初的龟壳到后来的纸张, 都用来记录这些信息. 慢慢到更现代化的各种磁盘等,随着信息的增长, 对数据存储的要求越来越高.  如何更加有效和快捷的处理这些信息成为了一个
 难题.
 
-![](img/mysql1.jpeg)
+<img src="../img/mysql1.jpeg" alt="">
 
-![](img/mysql3.jpeg)
+<img src="../img/mysql3.jpeg" alt="">
 
-![](img/mysql4.jpeg)
+<img src="../img/mysql4.jpeg" alt="">
 
 **数据库的出现, 很好的解决了数据的存储效率和读取效率.**
 
@@ -38,7 +38,7 @@ wiki: Golang-100-Days
 
 > 注意：有些人通常使用**数据库**这个术语来代表他们使用的**数据库软件**，这是不正确的。确切的说，数据库软件应称为**DBMS(数据库管理系统)**。**数据库**是通过**DBMS**创建和操纵的容器。**数据库**可以是保存在硬件设备上的文件，但也可以不是。对我们来说**数据库**究竟是文件还是其他什么东西并不重要，因为我们并不直接访问**数据库**，我们使用的是**DBMS**，它替我们访问数据库。
 
-![](img/mysql6.jpg)
+<img src="../img/mysql6.jpg" alt="">
 
 ### 1.3、什么是数据库系统
 
@@ -48,7 +48,7 @@ wiki: Golang-100-Days
 
 而在当今的互联网中，最常见的数据库模型主要是两种，即**关系型数据库**和**非关系型数据库。**
 
-![](img/数据库.png)
+<img src="../img/数据库.png" alt="">
 
 >其他数据库：
 >
@@ -74,7 +74,7 @@ wiki: Golang-100-Days
 
 > > **表(table)**是数据库中存储数据的基本单位。
 >
-> ![img](img/emp_table.jpeg)
+> <img src="../img/emp_table.jpeg" alt="img">
 >
 
 
@@ -129,7 +129,7 @@ wiki: Golang-100-Days
 
 ### 3.3 配置环境变量
 
-![01配置环境变量](img/01配置环境变量.png)
+<img src="../img/01配置环境变量.png" alt="01配置环境变量">
 
 ### 3.4 登陆
 
@@ -139,7 +139,7 @@ mysql -u root -p
 
 输入密码
 
-![02登陆](img/02登陆.jpg)
+<img src="../img/02登陆.jpg" alt="02登陆">
 
 >-u：后面跟随用户名
 >
@@ -151,7 +151,7 @@ mysql -u root -p
 
 B：也可以直接使用mysql命令行：
 
-![03登陆](img/03登陆.jpg)
+<img src="../img/03登陆.jpg" alt="03登陆">
 
 
 
@@ -163,7 +163,7 @@ dos命令行：(需要以管理员的方式运行cmd.exe)
 
 ​	输入：net start mysql
 
-![ 05停止和启动服务](img/05停止和启动服务.jpg)
+<img src="../img/05停止和启动服务.jpg" alt=" 05停止和启动服务">
 
 或者通过操作界面：我的电脑-管理-服务-开启和停止mysql服务。
 
@@ -171,17 +171,17 @@ dos命令行：(需要以管理员的方式运行cmd.exe)
 
 ### 4.1 安装并注册
 
-![05管理工具](img/05管理工具.jpg)
+<img src="../img/05管理工具.jpg" alt="05管理工具">
 
 
 
 ### 4.2 创建连接
 
-![04管理工具](img/04管理工具.jpg)
+<img src="../img/04管理工具.jpg" alt="04管理工具">
 
 
 
-![06使用navicat](img/06使用navicat.jpg)
+<img src="../img/06使用navicat.jpg" alt="06使用navicat">
 
 
 
@@ -494,7 +494,7 @@ MySQL中定义数据字段的类型对你数据库的优化是非常重要的。
 
 MySQL支持所有标准SQL数值数据类型。 这些类型包括严格数值数据类型(INTEGER、SMALLINT、DECIMAL和NUMERIC)，以及近似数值数据类型(FLOAT、REAL和DOUBLE PRECISION)。 关键字INT是INTEGER的同义词，关键字DEC是DECIMAL的同义词。 BIT数据类型保存位字段值，并且支持MyISAM、MEMORY、InnoDB和BDB表。 作为SQL标准的扩展，MySQL也支持整数类型TINYINT、MEDIUMINT和BIGINT。下面的表显示了需要的每个整数类型的存储和范围。
 
-![](img/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B.png)
+<img src="../img/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B.png" alt="">
 
 
 
@@ -506,7 +506,7 @@ MySQL支持所有标准SQL数值数据类型。 这些类型包括严格数值�
 
 表示时间值的日期和时间类型为DATETIME、DATE、TIMESTAMP、TIME和YEAR。 每个时间类型有一个有效值范围和一个"零"值，当指定不合法的MySQL不能表示的值时使用"零"值。 TIMESTAMP类型有专有的自动更新特性，将在后面描述。
 
-![](img/%E6%97%A5%E6%9C%9F%E7%B1%BB%E5%9E%8B.png)
+<img src="../img/%E6%97%A5%E6%9C%9F%E7%B1%BB%E5%9E%8B.png" alt="">
 
 
 
@@ -520,7 +520,7 @@ MySQL支持所有标准SQL数值数据类型。 这些类型包括严格数值�
 
 
 
-![](img/%E5%AD%97%E7%AC%A6%E4%B8%B2.png)
+<img src="../img/%E5%AD%97%E7%AC%A6%E4%B8%B2.png" alt="">
 
 **最常用的: char, varchar和text类型.**
 
@@ -595,7 +595,7 @@ create table student(id int auto_increament primary key, name varchar(16) not nu
 create table test_table( test_id INT NOT NULL AUTO_INCREMENT, test_title VARCHAR(100) NOT NULL, test_author VARCHAR(40) NOT NULL DEFAULT 'larry', test_date DATE, PRIMARY KEY ( test_id ) );
 ```
 
-![07建表](img/07建表.jpg)
+<img src="../img/07建表.jpg" alt="07建表">
 
 
 

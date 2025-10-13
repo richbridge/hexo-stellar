@@ -23,7 +23,7 @@ Micro是一个简化分布式开发的微服务生态系统，该系统为开发
 ### 1.3、micro组成
 micro是一个微服务工具包，是由一系列的工具包组成的，如下图所示：
 
-![micro](./img/micro平台组成.png)
+<img src=".././img/micro平台组成.png" alt="micro">
 
 * **Go Micro：**用于在Go中编写微服务的插件式RPC框架。它提供了用于服务发现，客户端负载平衡，编码，同步和异步通信库。
 
@@ -41,26 +41,26 @@ micro是一个微服务工具包，是由一系列的工具包组成的，如下
 
 #### 1.4.1、API
 启用API作为一个网关或代理，来作为微服务访问的单一入口。它应该在您的基础架构的边缘运行。它将HTTP请求转换为RPC并转发给相应的服务。
-![API工具](./img/api.png)
+<img src=".././img/api.png" alt="API工具">
 
 #### 1.4.2、Web
 UI是go-micro的web版本，允许通过UI交互访问环境。在未来，它也将是一种聚合Micro Web服务的方式。它包含一种Web应用程序的代理方式。将/[name]通过注册表路由到相应的服务。Web UI将前缀“go.micro.web。”（可以配置）添加到名称中，在注册表中查找它，然后将进行反向代理。
-![web工具](./img/web.png)
+<img src=".././img/web.png" alt="web工具">
 
 #### 1.4.3、Sidecar
 该Sidecar是go-micro的HTTP接口版本。这是将非Go应用程序集成到Micro环境中的一种方式。
-![sidecar工具](./img/car.png)
+<img src=".././img/car.png" alt="sidecar工具">
 
 #### 1.4.4、Bot
 Bot是一个Hubot风格的工具，位于您的微服务平台中，可以通过Slack，HipChat，XMPP等进行交互。它通过消息传递提供CLI的功能。可以添加其他命令来自动执行常用操作任务。
-![bot工具](./img/bot.png)
+<img src=".././img/bot.png" alt="bot工具">
 
 #### 1.4.5、CLI
 Micro CLI是go-micro的命令行版本，它提供了一种观察和与运行环境交互的方式。
 
 #### 1.4.6、Go-Micro
 Go-micro是微服务的独立RPC框架。它是该工具包的核心，并受到上述所有组件的影响。在这里，我们将看看go-micro的每个特征。
-![go-micro](./img/go-micro.png)
+<img src=".././img/go-micro.png" alt="go-micro">
 
 ### 1.5、Go-Micro特性
 * Registry：主要负责服务注册和发现功能。我们之前学习过的consul，就可以和此处的Registry结合起来，实现服务的发现功能。
@@ -84,7 +84,7 @@ consul环境是go-micro默认使用的服务发现方式。在之前的课程中
 
 #### 1.6.3、micro工具包安装（可选择）
 前面说过，micro是一个微服务系统，提供了很多工具包，可以帮助我们进行开发和调试。
-![microg工具包](./img/WX20190815-102639@2x.png)
+<img src=".././img/WX20190815-102639@2x.png" alt="microg工具包">
 
 可以使用如下命令安装micro的一系列的工具包：
 ```go
@@ -99,7 +99,7 @@ go get github.com/micro/go-micro
 ```
 
 安装完毕后，能够在$GOPATH目录下面找到go-micro的源码，如下图所示：
-![安装go-micro](./img/WX20190705-164152@2x.png)
+<img src=".././img/WX20190705-164152@2x.png" alt="安装go-micro">
 
 go-micro的源码在github上可以找到，链接如下：[https://github.com/micro/go-micro](https://github.com/micro/go-micro)
 
@@ -217,7 +217,7 @@ service StudentService {
     go get github.com/micro/protobuf/{proto,protoc-gen-go}
     ```
     通过上述命令可以成功安装proto插件,安装成功后可以在本地环境中的$GOPATH目录中的src/github.com/micro/protobuf中看到新安装的插件。源码目录如下图所示：
-    ![micro中的protobuf插件](./img/WX20190826-113159@2x.png)
+    <img src=".././img/WX20190826-113159@2x.png" alt="micro中的protobuf插件">
 
 * 指定micro插件进行编译
 
@@ -225,7 +225,7 @@ service StudentService {
     protoc --go_out=plugins=micro:. message.proto
     ```
     上述编译命令执行成功，可以在项目目录下的message目录下生成message.pb.go文件，该文件是由protoc编译器自动编译生成，开发者不能修改。message.pb.go如图所示：
-    ![编译后的文件](./img/WX20190826-113429@2x.png)
+    <img src=".././img/WX20190826-113429@2x.png" alt="编译后的文件">
     
 #### 2.3.3、编码实现服务功能
 在项目目录下，实现StudentService定义的rpc GetStudent功能。新建studentManager.go文件，具体实现如下：
@@ -307,7 +307,7 @@ func main() {
 ### 2.6、运行结果
 #### 2.6.1、运行服务端
 运行main.go文件中的main函数,服务注册成功，并输出如下日志：
-![服务注册](./img/WX20190826-231749@2x.png)
+<img src=".././img/WX20190826-231749@2x.png" alt="服务注册">
 
 ```go
 2019/08/26 22:50:18 Transport [http] Listening on [::]:54343
@@ -348,4 +348,4 @@ go run main.go --registry=consul
     http://localhost:8500
     ```
 
-    ![服务注册到consul](./img/WX20190827-083248@2x.png)
+    <img src=".././img/WX20190827-083248@2x.png" alt="服务注册到consul">

@@ -39,7 +39,7 @@ wiki: Golang-100-Days
 
 ### 1.4、服务注册发现的原理
 让我们再回顾一下服务注册与发现的原理：服务注册发现是将所有的服务注册到注册组件中心，各服务在进行互相调用功能时，先通过查询方法获取到要调用的服务的状态信息和地址，然后向对应的微服务模块发起调用。我们学习过consul的工作原理和环境搭建，congsul的工作原理图如下所示：
-![consul注册与发现](./img/WX20190828-152536@2x.png)
+<img src=".././img/WX20190828-152536@2x.png" alt="consul注册与发现">
 
 ### 1.5、未发现服务错误
 回顾完了服务注册发现的原理，我们就可以知道，如果请求发起端程序不能在服务组件中发现对应的服务，则会产生错误。接下来我们利用程序演示错误。
@@ -114,7 +114,7 @@ go run client.go
 
 我们通过举例来说明：在某个系统中存在用户服务（user service)、产品服务（product service)和消息服务（message service）。如果用户服务中要调用消息服务中的功能方法，则具体的实现方式可用下图所示方法表示：
 
-![高耦合调用方式](./img/WX20190831-163801@2x.png)
+<img src=".././img/WX20190831-163801@2x.png" alt="高耦合调用方式">
 
 按照正常的实现是在user service模块的程序中实例化message service的一个client，然后进行RPC调用，调用sendMessage来实现发送消息。
 
@@ -124,7 +124,7 @@ go run client.go
 ### 2.2、发布/订阅机制
 #### 2.2.1、事件驱动
 依然是上述的案例，用户服务在用户操作的过程中，需要调用消息服务的某个方法，假设为发送验证码消息的一个方法。为了使系统代码能够实现解耦，用户服务并不直接调用消息服务的具体的方法，而是将用户信息等相关数据发送到一个中间组件，该组件负责存储消息，而消息服务会按照特定的频率访问中间的消息存储组件，并取出其中的消息,然后执行发送验证码等操作。具体的示意图如下所示：
-![事件驱动](./img/WX20190831-170056@2x.png)
+<img src=".././img/WX20190831-170056@2x.png" alt="事件驱动">
 
 在上述的架构图中，我们可以看到，相较于之前的实现，多了一个中间的消息组件系统。
 
@@ -167,7 +167,7 @@ type Broker interface {
 ```go
 go get github.com/micro/go-plugins
 ```
-![go-plugins](./img/WX20190902-162841@2x.png)
+<img src=".././img/WX20190902-162841@2x.png" alt="go-plugins">
 可以通过上述的命令安装micro的插件库，安装以后可以在当前系统的$GOPATH/src/github.com/micro目录中找到对应的插件库源码。
 
 #### 2.4.3、Broker实现
@@ -191,7 +191,7 @@ $cd /usr/local/
 $./sbin/mosquitto -c etc/mosquitto/mosquitto.conf -d -v
 ```
 启动成功后，会在终端中有如下所示的日志输出：
-![启动mosquitto](./img/WX20190903-140930@2x.png)
+<img src=".././img/WX20190903-140930@2x.png" alt="启动mosquitto">
 出现如上图所示的输出内容，即表示mqtt启动成功。
 
 windows系统上的mqtt的安装和启动，可以到[https://activemq.apache.org/](https://activemq.apache.org/)中下载最新的安装文件，然后进行安装和运行。
@@ -271,7 +271,7 @@ mqtt服务器默认会在1883端口进行监听。
 
 #### 2.7.3、错误
 在运行main.go程序时，会报如下错误：cannot find package "github.com/eclipse/paho.mqtt.golang"：
-![错误](./img/WX20190903-113613@2x.png)
+<img src=".././img/WX20190903-113613@2x.png" alt="错误">
 
 需要我们安装对应的包源码，该包的源码地址在github地址代码库中：[https://github.com/eclipse/paho.mqtt.golang](https://github.com/eclipse/paho.mqtt.golang)，安装命令如下：
 ```go
@@ -279,11 +279,11 @@ go get github.com/eclipse/paho.mqtt.golang
 ```
 
 包安装后，可以执行server.go文件中的main函数，启动程序如下：
-![server.go函数](./img/WX20190903-145638@2x.png)
+<img src=".././img/WX20190903-145638@2x.png" alt="server.go函数">
 
 #### 2.7.4、启动client程序
 server程序启动后，启动客户端程序client.go，可以输出正确日志。另外可以在mqtt终端中输出相关的消息订阅和发布的日志，如下图所示：
-![mqtt日志](./img/WX20190903-150034@2x.png)
+<img src=".././img/WX20190903-150034@2x.png" alt="mqtt日志">
 
 ### 2.8、弊端
 

@@ -38,25 +38,25 @@ Goland是JetBrains公司推出的Go语言IDE，是一款功能强大，使用便
 
 新建Go项目：
 
-![land1](img/land1.png)
+<img src="../img/land1.png" alt="land1">
 
 
 
 创建项目：
 
-![chuangjianxiangmu](img/chuangjianxiangmu.png)
+<img src="../img/chuangjianxiangmu.png" alt="chuangjianxiangmu">
 
 
 
 Goland配置goroot：
 
-![gopath1](img/gopath1.png)
+<img src="../img/gopath1.png" alt="gopath1">
 
 
 
 配置gopath：
 
-![goland](img/goland.png)
+<img src="../img/goland.png" alt="goland">
 
 
 
@@ -120,13 +120,13 @@ ruby@ubuntu:/opt/GoLand-2017.3.3/bin$ sh goland.sh
 
 1.安装go-plus插件，这个插件提供了Atom中几乎所有go语言开发的支持，包括 tools, build flows, linters, vet 和 coverage tools。它还包含很多代码片段和一些其它特性。
 
-![22188-96e2f6da75383392](img/22188-96e2f6da75383392.png)
+<img src="../img/22188-96e2f6da75383392.png" alt="22188-96e2f6da75383392">
 
 
 
 2.language-go
 
-![language-go](img/language-go.jpg)
+<img src="../img/language-go.jpg" alt="language-go">
 
 
 
@@ -134,7 +134,7 @@ ruby@ubuntu:/opt/GoLand-2017.3.3/bin$ sh goland.sh
 
 3.安装file-icon插件，它提针对不同后缀的文件，提供了大量的icon显示。
 
-![002_chajian](img/002_chajian.png)
+<img src="../img/002_chajian.png" alt="002_chajian">
 
 
 
@@ -142,7 +142,7 @@ ruby@ubuntu:/opt/GoLand-2017.3.3/bin$ sh goland.sh
 
 4.设置字体大小等
 
-![shezhiziti](img/shezhiziti.jpg)
+<img src="../img/shezhiziti.jpg" alt="shezhiziti">
 
 
 

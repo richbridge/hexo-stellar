@@ -14,7 +14,7 @@ wiki: Golang-100-Days
 
  Go 的源码文件分类：
 
-![yuanmawenjian1](img/yuanmawenjian1.png)
+<img src="../img/yuanmawenjian1.png" alt="yuanmawenjian1">
 
 如上图，分为三类：
 
@@ -43,7 +43,7 @@ func main(){
 
 hello目录下有两个go文件了，一个是helloworld.go，一个是helloworld2.go。先说明一下，在上述文件夹中放了两个命令源码文件，同时都声明自己属于 main 代码包。
 
-![gomingling1](img/gomingling1.png)
+<img src="../img/gomingling1.png" alt="gomingling1">
 
 打开终端，进入hello这个目录，也可以看到这两个文件：
 
@@ -63,7 +63,7 @@ Go Go Go !!!localhost:hello ruby$ go run helloworld2.go
 Go Go Go !!!
 ```
 
-![gomingling2](img/gomingling2.png)
+<img src="../img/gomingling2.png" alt="gomingling2">
 
 
 
@@ -83,7 +83,7 @@ localhost:hello ruby$
 
 运行效果图：
 
-![gomingling3](img/gomingling3.png)
+<img src="../img/gomingling3.png" alt="gomingling3">
 
 
 
@@ -225,7 +225,7 @@ localhost:hello ruby$
 
 运行效果图：
 
-![gomingling4](img/gomingling4.gif)
+<img src="../img/gomingling4.gif" alt="gomingling4">
 
 
 
@@ -233,7 +233,7 @@ localhost:hello ruby$
 
 总结一下如下图：
 
-![gomingling5](img/gomingling5.jpg)
+<img src="../img/gomingling5.jpg" alt="gomingling5">
 
 
 
@@ -249,7 +249,7 @@ localhost:hello ruby$
 
 我们进入：`/var/folders/kt/nlhsnpgn6lgd_q16f8j83sbh0000gn/T/go-build593750496`目录，可以看到如下目录结构：
 
-![gomingling6](img/gomingling6.png)
+<img src="../img/gomingling6.png" alt="gomingling6">
 
 
 
@@ -306,7 +306,7 @@ localhost:hello ruby$
 
 于是在当前目录直接生成了以当前文件夹为名的可执行文件（ 在 Mac 平台下是 Unix executable 文件，在 Windows 平台下是 exe 文件）
 
-![gomingling7](img/gomingling7.png)
+<img src="../img/gomingling7.png" alt="gomingling7">
 
 
 
@@ -320,7 +320,7 @@ localhost:hello ruby$
 
 
 
-![gomingling8](img/gomingling8.png)
+<img src="../img/gomingling8.png" alt="gomingling8">
 
 
 
@@ -341,7 +341,7 @@ localhost:hello ruby$
 
 查看目录：
 
-![gomingling9](img/gomingling9.png)
+<img src="../img/gomingling9.png" alt="gomingling9">
 
 
 
@@ -390,13 +390,13 @@ localhost:hello ruby$
 
 总结一下如下图：
 
-![gomingling10](img/gomingling10.jpg)
+<img src="../img/gomingling10.jpg" alt="gomingling10">
 
 
 
 最后：
 
-![](img/zhixingyuanli.png)
+<img src="../img/zhixingyuanli.png" alt="">
 
 
 
@@ -461,7 +461,7 @@ localhost:hello ruby$
 
 总结一下如下图：
 
-![gomingling11](img/gomingling11.jpg)
+<img src="../img/gomingling11.jpg" alt="gomingling11">
 
 
 
@@ -518,13 +518,13 @@ localhost:hello ruby$
 
 效果图：
 
-![gomingling12](img/gomingling12.png)
+<img src="../img/gomingling12.png" alt="gomingling12">
 
 
 
 这里可以很明显的看到，执行完 go get 命令以后，会调用 git clone 方法下载源码，并编译，最终会把库源码文件编译成归档文件安装到 pkg 对应的相关平台目录下。
 
-![gomingling13](img/gomingling13.png)
+<img src="../img/gomingling13.png" alt="gomingling13">
 
 
 
@@ -532,7 +532,7 @@ localhost:hello ruby$
 
 总结一下如下图：
 
-![gomingling14](img/gomingling14.jpg)
+<img src="../img/gomingling14.jpg" alt="gomingling14">
 
 
 

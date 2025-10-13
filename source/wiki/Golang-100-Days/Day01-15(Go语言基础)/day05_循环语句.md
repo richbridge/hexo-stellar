@@ -226,7 +226,7 @@ label: statement;
 
 
 
-![goto1](img/goto1.jpg)
+<img src="../img/goto1.jpg" alt="goto1">
 
 ```go
 package main

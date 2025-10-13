@@ -39,7 +39,7 @@ C:\Users\ruby>mysql -u root -p
 回车后输入密码即可
 ```
 
-![WX20190725-112248](img\WX20190725-112248.png)
+<img src="../img\WX20190725-112248.png" alt="WX20190725-112248">
 
 
 
@@ -51,11 +51,11 @@ C:\Users\ruby>mysql -u root -p
 直接输入密码即可
 ```
 
-![WX20190725-112402](img\WX20190725-112402.png)
+<img src="../img\WX20190725-112402.png" alt="WX20190725-112402">
 
 方式三：通过其他的可视化工具软件：
 
-![WX20190725-112650](img\WX20190725-112650.png)
+<img src="../img\WX20190725-112650.png" alt="WX20190725-112650">
 
 
 
@@ -95,7 +95,7 @@ mysql> show databases;
 
 
 
-![WX20190725-120339](img\WX20190725-120339.png)
+<img src="../img\WX20190725-120339.png" alt="WX20190725-120339">
 
 
 
@@ -115,7 +115,7 @@ mysql> show tables;
 
 
 
-![WX20190725-120545](img\WX20190725-120545.png)
+<img src="../img\WX20190725-120545.png" alt="WX20190725-120545">
 
 
 
@@ -179,7 +179,7 @@ mysql> desc users;
 
 
 
-![WX20190725-143324](img\WX20190725-143324.png)
+<img src="../img\WX20190725-143324.png" alt="WX20190725-143324">
 
 
 
@@ -189,7 +189,7 @@ mysql> desc users;
 mysql> show create table users;
 ```
 
-![WX20190725-143609](img\WX20190725-143609.png)
+<img src="../img\WX20190725-143609.png" alt="WX20190725-143609">
 
 
 
@@ -258,7 +258,7 @@ alter table 表名 xxx。。。
        -> birthday date);
    ```
 
-   ![WX20190725-152709](img\WX20190725-152709.png)
+   <img src="../img\WX20190725-152709.png" alt="WX20190725-152709">
 
    
 
@@ -270,7 +270,7 @@ alter table 表名 xxx。。。
 
    
 
-![WX20190725-153114](img\WX20190725-153114.png)
+<img src="../img\WX20190725-153114.png" alt="WX20190725-153114">
 
 
 
@@ -288,7 +288,7 @@ alter table 表名 xxx。。。
 mysql> alter table users change pwd password varchar(30);
 ```
 
-![WX20190725-153525](img\WX20190725-153525.png)
+<img src="../img\WX20190725-153525.png" alt="WX20190725-153525">
 
 ​	
 
@@ -298,7 +298,7 @@ mysql> alter table users change pwd password varchar(30);
    mysql> alter table users drop birthday;
    ```
 
-![WX20190725-153854](img\WX20190725-153854.png)
+<img src="../img\WX20190725-153854.png" alt="WX20190725-153854">
 
 
 
@@ -311,7 +311,7 @@ mysql> alter table users rename to user2;
 mysql> rename table user2 to user3;
 ```
 
-![WX20190725-154455](img\WX20190725-154455.png)
+<img src="../img\WX20190725-154455.png" alt="WX20190725-154455">
 
 
 

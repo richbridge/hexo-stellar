@@ -89,7 +89,7 @@ fmt.Println(conf.Port)
 iris框架支持请求数据、模型、持久数据分层处理，并支持各层级模块代码绑定执行。
 MVC即：model、view、controller三个部分，分别代表数据层、视图层、控制层。控制器层负责完成页面逻辑、实体层负责完成数据准备与数据操作、视图层负责展现UI效果。
 在iris框架中，用一张图表示前端请求、服务端处理请求、服务端返回数据到前端的请求过程图，描述如下：
-![Iris框架mvc请求过程](./img/WX20190806-151655@2x.png)
+<img src=".././img/WX20190806-151655@2x.png" alt="Iris框架mvc请求过程">
 
 ### 2.1 mvc.Application
 iris框架中的mvc包中提供了Application结构体定义。开发者可以通过注册自定义的controller来使用对应提供的API，其中包含路由组router.Party,以此用来注册layout、middleware以及相应的handlers等。
@@ -222,4 +222,4 @@ session.Set("key", "helloworld")
 ### 4.2 项目资源导入
 因为我们实战的项目开发主要是实现服务器端的功能开发和Iris框架的知识练习，因此我们将注重在后台功能开发上，对于前端的页面和一些布局效果，我们不做深入研究，只需要会使用，会调试即可。
 因此，在该项目中，我们从外部导入的资源主要是前端的一些资源。前端框架采用Vue编写，我们在此项目中直接将编译后的js文件、css文件等相关的文件导入到实战项目中，全部存放于static目录中，如下图所示：
-![资源导入](./img/resouce_import.jpg)
+<img src=".././img/resouce_import.jpg" alt="资源导入">

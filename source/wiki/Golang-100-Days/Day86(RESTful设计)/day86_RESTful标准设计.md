@@ -71,7 +71,7 @@ micro工具提供了构建api网关服务的功能，并基于go-micro框架进�
 ```go
 micro api
 ``` 
-![运行micro服务](./img/WX20190912-074346@2x.png)
+<img src=".././img/WX20190912-074346@2x.png" alt="运行micro服务">
 
 ### 反向代理的API服务启动
 在Micro api功能中,支持多种处理请求路由的方式，我们称之为Handler。包括：API Handler、RPC Handler、反向代理、Event Handler，RPC等五种方式。在本案例中，我们使用反向代理来进行演示。

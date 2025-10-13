@@ -146,7 +146,7 @@ main(),是程序运行的入口。
 
 如果有自己的域名，那也可以使用自己的域名。如果没有个人域名，现在流行的做法是使用你个人的github名，因为每个人的是唯一的，所以也不会有重复。
 
-![package1](http://7xtcwd.com1.z0.glb.clouddn.com/package1.png)
+<img src="../http://7xtcwd.com1.z0.glb.clouddn.com/package1.png" alt="package1">
 
 
 

@@ -14,7 +14,7 @@ wiki: Golang-100-Days
 
 首先我们登录Golang的官方网站：https://golang.org/
 
-![guanwang2](img/guanwang2.png)
+<img src="../img/guanwang2.png" alt="guanwang2">
 
 
 
@@ -24,7 +24,7 @@ wiki: Golang-100-Days
 
 当然你也可以登录Golang的国内网站：<https://golang.google.cn/>
 
-![WX20190403-095602](img/guanwang1.png)
+<img src="../img/guanwang1.png" alt="WX20190403-095602">
 
 ## 二、下载
 
@@ -32,7 +32,7 @@ wiki: Golang-100-Days
 
 在Mac、Windows和Linux三个平台上都支持Golang。您可以从<https://golang.org/dl/>下载相应平台的安装包。
 
-![xiazai1](img/xiazai1.png)
+<img src="../img/xiazai1.png" alt="xiazai1">
 
 
 
@@ -40,13 +40,13 @@ wiki: Golang-100-Days
 
 <https://www.studygolang.com/dl> 进行安装软件的下载。
 
-![xiazai2](img/xiazai2.png)
+<img src="../img/xiazai2.png" alt="xiazai2">
 
 
 
 和
 
-![xiazai3](img/xiazai3.png)
+<img src="../img/xiazai3.png" alt="xiazai3">
 
 
 
@@ -107,7 +107,7 @@ ruby@hanru:~$ cd 下载
 ruby@hanru:~/下载$ ls
 ```
 
-![ubuntu1](img/ubuntu1.png)
+<img src="../img/ubuntu1.png" alt="ubuntu1">
 
 
 
@@ -117,7 +117,7 @@ ruby@hanru:~/下载$ ls
 ruby@ubuntu:~/下载$ sudo tar -xzf go1.12.1.linux-amd64.tar.gz -C /usr/local
 ```
 
-![ubuntu2](img/ubuntu2.png)
+<img src="../img/ubuntu2.png" alt="ubuntu2">
 
 
 
@@ -127,7 +127,7 @@ ruby@ubuntu:~/下载$ sudo tar -xzf go1.12.1.linux-amd64.tar.gz -C /usr/local
 
 可以进入这个文件夹直接查看：
 
-![ubuntu3](img/ubuntu3.png)
+<img src="../img/ubuntu3.png" alt="ubuntu3">
 
 
 
@@ -138,7 +138,7 @@ ruby@hanru:~/下载$ cd /usr/local
 ruby@hanru:/usr/local$ ls
 ```
 
-![ubuntu4](img/ubuntu4.png)
+<img src="../img/ubuntu4.png" alt="ubuntu4">
 
 
 
@@ -300,7 +300,7 @@ Mac分为压缩版和安装版，他们都是64位的。压缩版和Linux的大�
 
 找到下载后的pkg安装包：一般情况下，下载后的文件都在下载目录下。
 
-![anzhuang1](img/anzhuang1.png)
+<img src="../img/anzhuang1.png" alt="anzhuang1">
 
 
 
@@ -354,7 +354,7 @@ export PATH=$PATH:$GOBIN
 
 - GOPATH：Go工程的路径（例：E:\go）。如果有多个，就以分号分隔添加
 
-  ![winhuanjing1](img/winhuanjing1.jpg)
+  <img src="../img/winhuanjing1.jpg" alt="winhuanjing1">
 
 **修改：**
 
@@ -364,7 +364,7 @@ export PATH=$PATH:$GOBIN
 
   
 
-  ![winhuanjing2](img/winhuanjing2.jpg)
+  <img src="../img/winhuanjing2.jpg" alt="winhuanjing2">
 
   
 

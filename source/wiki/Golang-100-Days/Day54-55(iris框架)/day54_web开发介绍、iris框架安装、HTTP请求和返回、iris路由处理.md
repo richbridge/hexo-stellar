@@ -37,8 +37,8 @@ web项目从大的功能上可以分为前台和后台两个部分。前台主�
 在本系列课程中，我们将带大家进行一个后台管理平台项目的实战开发，以帮助大家学习Iris框架的相关用法和项目开发流程。
 #### 1.3.1 项目效果
 首先我们来看一下项目整体运行后的效果：  
-![后台管理平台登录界面](./img/iris后台管理系统.png)
-![后台管理平台主界面](./img/iris后台主界面.png)
+<img src=".././img/iris后台管理系统.png" alt="后台管理平台登录界面">
+<img src=".././img/iris后台主界面.png" alt="后台管理平台主界面">
 
 #### 1.2.2 项目架构
 * 前端：vue框架
@@ -77,8 +77,8 @@ Iris框架以简单而强大的api而被开发者所熟悉。iris除了为开发
 8）能定制HTTP错误  
 9）源码改变后自动加载  
 等等还有很多特性，大家可以参考Iris官方文档。在GoWeb开发的诸多框架中，各个维度的性能比较如下： 
- ![Iris与其他语言的框架性能对比](./img/Go语言性能对比.png)
- ![GoWeb各框架开发效率对比](./img/Go语言web框架对比.png)
+ <img src=".././img/Go语言性能对比.png" alt="Iris与其他语言的框架性能对比">
+ <img src=".././img/Go语言web框架对比.png" alt="GoWeb各框架开发效率对比">
  
 ### 2.3 Iris框架学习渠道
 在学习Iris框架过程时，我们需要有相应的配套资料才能够完成我们的学习。下面是学习Iris框架过程中可能会用到的资料。  
@@ -99,7 +99,7 @@ Iris框架中文学习文档： [https://studyiris.com/doc/](https://studyiris.c
 go get -u github.com/kataras/iris
 ```
 在本地终端中执行如上的安装命令，等待命令执行成功，即表示Iris源码下载安装完成。安装完成Iris框架以后，能够在本地机器的GoPath环境目录中的src/github.com/目录下找到iris框架对应的包名，如下图所示：  
-![Iris框架源码安装图片](./img/Iris源码结构.png)
+<img src=".././img/Iris源码结构.png" alt="Iris框架源码安装图片">
 如图所示的kataras/iris所在的目录就是iris框架的源码，如上图所示即是安装成功。  
 
 ### 2.5 源码案例

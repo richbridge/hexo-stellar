@@ -67,7 +67,7 @@ consul agent -dev -config-dir /etc/consul.d/
 dig @127.0.0.1 -p 8600 dev.firstservice.service.consul
 ```
 
-![dns服务查询](./img/WX20190619-145024@2x.png)
+<img src=".././img/WX20190619-145024@2x.png" alt="dns服务查询">
 
 【说明：】
 * 1、dev.firstservice.service.consul是固定的格式组合，具体格式为:**tag.servicename.service.consul**，即**tag**和**servicename**为服务创建时自定义配置内容。
@@ -79,7 +79,7 @@ dig @127.0.0.1 -p 8600 dev.firstservice.service.consul
 curl http://localhost:8500/v1/catalog/service/firstservice
 ```
 
-![http模式查询](./img/WX20190619-144852@2x.png)
+<img src=".././img/WX20190619-144852@2x.png" alt="http模式查询">
 
 【说明:】
 * 1、HTTP访问路径：host:port/版本号/service/服务名。
@@ -164,7 +164,7 @@ Docker安装完成以后，可以进行测试。可以通过终端命令的形�
 docker version
 ```
 
-![docker版本查看](./img/1561086326268.jpg)
+<img src=".././img/1561086326268.jpg" alt="docker版本查看">
 
 ### 2.5、Docker中安装consul
 Docker仅仅是一个容器，是搭建集群的一个环境。如果想要搭建多个集群，还必须安装consul环境。Docker中安装consul环境，可以使用指令实现。Docker安装consul指令如下：
@@ -175,7 +175,7 @@ Docker仅仅是一个容器，是搭建集群的一个环境。如果想要搭�
 docker search consul
 ```
 使用如上命令查看consul的镜像文件，在终端输出如下所示内容：
-![docker中查找consul的镜像文件](./img/WX20190621-114548@2x.png)
+<img src=".././img/WX20190621-114548@2x.png" alt="docker中查找consul的镜像文件">
 
 * **docker pull**
 
@@ -183,7 +183,7 @@ docker search consul
 docker pull consul
 ```
 通过search查询了consul镜像的相关内容后，可以使用如上的docker pull命令安装consul环境。
-![Docker安装consul环境](./img/WX20190621-115304@2x.png)
+<img src=".././img/WX20190621-115304@2x.png" alt="Docker安装consul环境">
 
 ### 2.6、检验Docker安装Consul成功
 在Docker中安装consul可以，可以通过如下命令查看docker中安装consul是否成功：
@@ -192,7 +192,7 @@ docker pull consul
 docker images
 ```
 
-![docker中检查是否安装了consul](./img/WX20190621-134602@2x.png)
+<img src=".././img/WX20190621-134602@2x.png" alt="docker中检查是否安装了consul">
 
 或者
 
@@ -200,7 +200,7 @@ docker images
 docker run consul version
 ```
 
-![docker中查看consul版本](./img/WX20190621-115457@2x.png)
+<img src=".././img/WX20190621-115457@2x.png" alt="docker中查看consul版本">
 
 ### 2.7、Docker中启动一个单独节点consul agent
 Docker中安装好了consul以后，首先尝试启动一个server节点，可以通过如下命令来启动docker中的单个节点：
@@ -208,7 +208,7 @@ Docker中安装好了consul以后，首先尝试启动一个server节点，可�
 ```
 $ docker run -p 8500:8500/tcp consul agent -server -ui -bootstrap-expect=1 -client=0.0.0.0
 ```
-![Docker启动单节点server](./img/WX20190711-155259@2x.png)
+<img src=".././img/WX20190711-155259@2x.png" alt="Docker启动单节点server">
 
 如上的命令中，参数说明如下：
 
@@ -227,7 +227,7 @@ $ docker run -p 8500:8500/tcp consul agent -server -ui -bootstrap-expect=1 -clie
     curl localhost:8500/v1/catalog/nodes
     ```
     
-    ![http端口的映射访问](./img/WX20190621-165728@2x.png)
+    <img src=".././img/WX20190621-165728@2x.png" alt="http端口的映射访问">
     
 * dig来和DNS接口进行交互：
 
@@ -235,11 +235,11 @@ $ docker run -p 8500:8500/tcp consul agent -server -ui -bootstrap-expect=1 -clie
     dig @0.0.0.0 -p 8600 node1.node.consul
     ```
     
-    ![dns端口映射访问](./img/WX20190621-165754@2x.png)
+    <img src=".././img/WX20190621-165754@2x.png" alt="dns端口映射访问">
     
 另外，我们还可以浏览器来进行访问，在主机的浏览器中键入：[http://127.0.0.1:8500](http://127.0.0.1:8500) 进行访问，可以查看到server节点的相关信息。
 
-![主机的浏览器访问sever信息](./img/WX20190621-171549@2x.png)
+<img src=".././img/WX20190621-171549@2x.png" alt="主机的浏览器访问sever信息">
 
 * 宿主机上查看节点数量
 在宿主机上已经安装了Consul， 可以用命令行来和容器里的Consul Agent进行交互：
@@ -248,7 +248,7 @@ $ docker run -p 8500:8500/tcp consul agent -server -ui -bootstrap-expect=1 -clie
 consul members
 ```
 
-![宿主机中的与docker中的节点进行交互](./img/WX20190621-172012@2x.png)
+<img src=".././img/WX20190621-172012@2x.png" alt="宿主机中的与docker中的节点进行交互">
 
 ## 三、微服务管理--Docker搭建Consul集群
 ### 3.1、一台主机上搭建Consul集群并测试
@@ -317,10 +317,10 @@ $ docker run -d -e CONSUL_BIND_INTERFACE='eth0' --name=consul_server_6 consul ag
 我们可以在浏览器中访问localhost:8500端口,可以看到如下效果:
 
 * 三个serve类型的节点集群节点：
-![http://7xtcwd.com1.z0.glb.clouddn.com/WX20190712-152703@2x.png](./img/WX20190712-152703@2x.png)
+<img src=".././img/WX20190712-152703@2x.png" alt="http://7xtcwd.com1.z0.glb.clouddn.com/WX20190712-152703@2x.png">
 
 * 所有的Node节点（server和client）：
-![http://7xtcwd.com1.z0.glb.clouddn.com/WX20190712-152716@2x.png](./img/WX20190712-152716@2x.png)
+<img src=".././img/WX20190712-152716@2x.png" alt="http://7xtcwd.com1.z0.glb.clouddn.com/WX20190712-152716@2x.png">
 
 #### 3.2.2、命令行查看节点状态：
 在终端下执行如下命令：
@@ -333,7 +333,7 @@ $docker exec consul_server_1 consul members
 ```
 
 均可以看到如下输出效果：
-![http://7xtcwd.com1.z0.glb.clouddn.com/WX20190712-153156@2x.png](./img/WX20190712-153156@2x.png)
+<img src=".././img/WX20190712-153156@2x.png" alt="http://7xtcwd.com1.z0.glb.clouddn.com/WX20190712-153156@2x.png">
 
 ### 3.3、停止节点
 * 活动容器状态查看
@@ -341,14 +341,14 @@ $docker exec consul_server_1 consul members
 ```go
 $docker ps
 ```
-![http://7xtcwd.com1.z0.glb.clouddn.com/WX20190712-153542@2x.png](./img/WX20190712-153542@2x.png)
+<img src=".././img/WX20190712-153542@2x.png" alt="http://7xtcwd.com1.z0.glb.clouddn.com/WX20190712-153542@2x.png">
 
 * 停止容器活动
 可以使用如下命令将目前正处于活动中的容器停止：
 ```go
 $docker stop containerID 
 ```
-![http://7xtcwd.com1.z0.glb.clouddn.com/WX20190712-153839@2x.png](./img/WX20190712-153839@2x.png)
+<img src=".././img/WX20190712-153839@2x.png" alt="http://7xtcwd.com1.z0.glb.clouddn.com/WX20190712-153839@2x.png">
 如果要停止多个，可以用空格隔开。
 
 * 移除容器
@@ -356,7 +356,7 @@ $docker stop containerID
 ```go
 $docker rm containerID
 ```
-![http://7xtcwd.com1.z0.glb.clouddn.com/WX20190712-154045@2x.png](./img/WX20190712-154045@2x.png)
+<img src=".././img/WX20190712-154045@2x.png" alt="http://7xtcwd.com1.z0.glb.clouddn.com/WX20190712-154045@2x.png">
 
 ## 四、微服务管理--微服务定义
 ### 4.1、consul常用命令及选项

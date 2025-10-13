@@ -15,7 +15,7 @@ wiki: Golang-100-Days
 
 以下是go中可用的基本数据类型
 
-![002shujuleixng](img/002shujuleixng.jpg)
+<img src="../img/002shujuleixng.jpg" alt="002shujuleixng">
 
 
 

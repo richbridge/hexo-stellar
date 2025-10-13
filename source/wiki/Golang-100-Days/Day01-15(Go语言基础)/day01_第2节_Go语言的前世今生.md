@@ -10,7 +10,7 @@ wiki: Golang-100-Days
 > @author：韩茹
 > 版权所有：北京千锋互联科技有限公司
 
-![go_logo](img/go_logo.jpg)
+<img src="../img/go_logo.jpg" alt="go_logo">
 
 ## 一、 为什么需要一个新的语言
 
@@ -57,7 +57,7 @@ Go的三个作者分别是： Rob Pike（罗伯.派克），Ken Thompson（肯.�
 
 
 
-![aa](img/aa.jpg)
+<img src="../img/aa.jpg" alt="aa">
 
 
 
@@ -73,7 +73,7 @@ Go的三个作者分别是： Rob Pike（罗伯.派克），Ken Thompson（肯.�
 
 ### 4.1 Go的命名
 
-![mail1](img/mail1.jpg)
+<img src="../img/mail1.jpg" alt="mail1">
 
 
 
@@ -91,7 +91,7 @@ Go的三个作者分别是： Rob Pike（罗伯.派克），Ken Thompson（肯.�
 
 **第一个事情是在开发设计 Go 语言过程中的第一个重大惊喜是收到了以下这封邮件：**
 
-![mail2](img/mail2.jpg)
+<img src="../img/mail2.jpg" alt="mail2">
 
 
 
@@ -115,7 +115,7 @@ Ian Lance Taylor 的加入以及第二个编译器 (gcc go) 的实现 在带来�
 
 
 
-![1641730da1fe6861](img/1641730da1fe6861.jpg)
+<img src="../img/1641730da1fe6861.jpg" alt="1641730da1fe6861">
 
 
 

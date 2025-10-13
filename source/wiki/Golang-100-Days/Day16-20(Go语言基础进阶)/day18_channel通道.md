@@ -107,7 +107,7 @@ func test1(ch chan int){
 
 运行结果：
 
-![WX20190812-154429](img/WX20190812-154429.png)
+<img src="../img/WX20190812-154429.png" alt="WX20190812-154429">
 
 我们能够看到，ch和ch1的地址是一样的，说明它们是同一个通道。
 
@@ -196,7 +196,7 @@ func main() {
 
 运行结果：
 
-![WX20190812-153205](img/WX20190812-153205.png)
+<img src="../img/WX20190812-153205.png" alt="WX20190812-153205">
 
 在上面的程序中，我们先创建了一个chan bool通道。然后启动了一条子Goroutine，并循环打印10个数字。然后我们向通道ch1中写入输入true。然后在主goroutine中，我们从ch1中读取数据。这一行代码是阻塞的，这意味着在子Goroutine将数据写入到该通道之前，主goroutine将不会执行到下一行代码。因此，我们可以通过channel实现子goroutine和主goroutine之间的通信。当子goroutine执行完毕前，主goroutine会因为读取ch1中的数据而阻塞。从而保证了子goroutine会先执行完毕。这就消除了对时间的需求。在之前的程序中，我们要么让主goroutine进入睡眠，以防止主要的Goroutine退出。要么通过WaitGroup来保证子goroutine先执行完毕，主goroutine才结束。
 
@@ -233,7 +233,7 @@ func main() {
 
 运行结果：
 
-![WX20190812-154236](img/WX20190812-154236.png)
+<img src="../img/WX20190812-154236.png" alt="WX20190812-154236">
 
 
 
@@ -394,7 +394,7 @@ func sendData(ch1 chan int)  {
 
 运行结果
 
-![WX20190813-100521](img/WX20190813-100521.png)
+<img src="../img/WX20190813-100521.png" alt="WX20190813-100521">
 
 
 
@@ -436,7 +436,7 @@ func sendData(ch1 chan int)  {
 
 运行结果：
 
-![WX20190813-100915](img/WX20190813-100915.png)
+<img src="../img/WX20190813-100915.png" alt="WX20190813-100915">
 
 
 
@@ -532,7 +532,7 @@ func sendData3(ch3 chan string) {
 
 运行结果：
 
-![WX20190813-102230](img/WX20190813-102230.png)
+<img src="../img/WX20190813-102230.png" alt="WX20190813-102230">
 
 
 
@@ -600,7 +600,7 @@ func sendData(ch1 chan string, done chan bool)  {
 
 运行结果：
 
-![WX20190814-101353](img/WX20190814-101353.png)
+<img src="../img/WX20190814-101353.png" alt="WX20190814-101353">
 
 
 
@@ -666,7 +666,7 @@ func fun2(ch <-chan int){
 
 运行结果：
 
-![WX20190814-102655](img/WX20190814-102655.png)
+<img src="../img/WX20190814-102655.png" alt="WX20190814-102655">
 
 
 
@@ -705,7 +705,7 @@ NewTimer()创建一个新的计时器，该计时器将在其通道上至少持�
 
 
 
-![WX20190815-100148](img/WX20190815-100148.png)
+<img src="../img/WX20190815-100148.png" alt="WX20190815-100148">
 
 它的返回值是一个Timer。
 
@@ -771,7 +771,7 @@ func main() {
 
 运行结果：
 
-![WX20190815-104148](img/WX20190815-104148.png)
+<img src="../img/WX20190815-104148.png" alt="WX20190815-104148">
 
 
 
@@ -781,7 +781,7 @@ func main() {
 
 
 
-![WX20190815-102436](img/WX20190815-102436.png)
+<img src="../img/WX20190815-102436.png" alt="WX20190815-102436">
 
 
 
@@ -847,7 +847,7 @@ func main() {
 
 运行结果：
 
-![WX20190815-104319](img/WX20190815-104319.png)
+<img src="../img/WX20190815-104319.png" alt="WX20190815-104319">
 
 
 
@@ -855,7 +855,7 @@ func main() {
 
 在等待持续时间之后，然后在返回的通道上发送当前时间。它相当于NewTimer(d).C。在计时器触发之前，垃圾收集器不会恢复底层计时器。如果效率有问题，使用NewTimer代替，并调用Timer。如果不再需要计时器，请停止。
 
-![WX20190815-093909](img/WX20190815-093909.png)
+<img src="../img/WX20190815-093909.png" alt="WX20190815-093909">
 
 
 
@@ -902,7 +902,7 @@ func main() {
 
 运行结果：
 
-![WX20190815-095743](img/WX20190815-095743.png)
+<img src="../img/WX20190815-095743.png" alt="WX20190815-095743">
 
 
 
@@ -996,7 +996,7 @@ func main() {
 
 
 
-![WX20190816-104608](img/WX20190816-104608.png)
+<img src="../img/WX20190816-104608.png" alt="WX20190816-104608">
 
 
 
@@ -1037,7 +1037,7 @@ func main() {
 
 运行结果：
 
-![WX20190816-104450](img/WX20190816-104450.png)
+<img src="../img/WX20190816-104450.png" alt="WX20190816-104450">
 
 
 
@@ -1121,7 +1121,7 @@ chan<- T // 声明一个只能用于发送的通道
 
 
 
-![channel](img/channel.png)
+<img src="../img/channel.png" alt="channel">
 
 
 
@@ -1166,7 +1166,7 @@ Go并发调度: G-P-M模型
 
 
 
-![goroutine2](img/goroutine2.png)
+<img src="../img/goroutine2.png" alt="goroutine2">
 
 
 

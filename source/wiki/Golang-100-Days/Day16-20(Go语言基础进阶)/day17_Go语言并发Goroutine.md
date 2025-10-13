@@ -14,11 +14,11 @@ wiki: Golang-100-Days
 
 怎么来理解多任务呢？其实就是指我们的操作系统可以同时执行多个任务。举个例子，你一边听音乐，一边刷微博，一边聊QQ，一边用Markdown写作业，这就是多任务，至少同时有4个任务正在运行。还有很多任务悄悄地在后台同时运行着，只是界面上没有显示而已。
 
-![duorenwu1_meitu_1](img/duorenwu1_meitu_1.jpg)
+<img src="../img/duorenwu1_meitu_1.jpg" alt="duorenwu1_meitu_1">
 
 CPU的速度太快啦。。。
 
-![sudukuai](img/sudukuai.jpeg)
+<img src="../img/sudukuai.jpeg" alt="sudukuai">
 
 ## 1.2 什么是并发
 
@@ -38,7 +38,7 @@ Go是并发语言，而不是并行语言。在讨论如何在Go中进行并发�
 
 假设同一浏览器运行在多核处理器上。在这种情况下，文件下载组件和HTML呈现组件可能同时在不同的内核中运行。这就是所谓的并行性。
 
-![WX20190730-100944](img/WX20190730-100944.png)
+<img src="../img/WX20190730-100944.png" alt="WX20190730-100944">
 
 
 
@@ -46,7 +46,7 @@ Go是并发语言，而不是并行语言。在讨论如何在Go中进行并发�
 
 
 
-![t](img/t.png)
+<img src="../img/t.png" alt="t">
 
 
 
@@ -105,7 +105,7 @@ pthread create函数。拥有多个线程的进程可以并发执行多个任务
 
 用户线程与KSE是1对1关系(1:1)。大部分编程语言的线程库(如linux的pthread，Java的java.lang.Thread，C++11的std::thread等等)都是对操作系统的线程（内核级线程）的一层封装，创建出来的每个线程与一个不同的KSE静态关联，因此其调度完全由OS调度器来做。这种方式实现简单，直接借助OS提供的线程能力，并且不同用户线程之间一般也不会相互影响。但其创建，销毁以及多个线程之间的上下文切换等操作都是直接由OS层面亲自来做，在需要使用大量线程的场景下对OS的性能影响会很大。
 
-![moxing2](img/moxing2.jpg)
+<img src="../img/moxing2.jpg" alt="moxing2">
 
 每个线程由内核调度器独立的调度，所以如果一个线程阻塞则不影响其他的线程。
 
@@ -118,7 +118,7 @@ pthread create函数。拥有多个线程的进程可以并发执行多个任务
 用户线程与KSE是多对1关系(M:1)，这种线程的创建，销毁以及多个线程之间的协调等操作都是由用户自己实现的线程库来负责，对OS内核透明，一个进程中所有创建的线程都与同一个KSE在运行时动态关联。现在有许多语言实现的 **协程** 基本上都属于这种方式。这种实现方式相比内核级线程可以做的很轻量级，对系统资源的消耗会小很多，因此可以创建的数量与上下文切换所花费的代价也会小得多。但该模型有个致命的缺点，如果我们在某个用户线程上调用阻塞式系统调用(如用阻塞方式read网络IO)，那么一旦KSE因阻塞被内核调度出CPU的话，剩下的所有对应的用户线程全都会变为阻塞状态（整个进程挂起）。 
 所以这些语言的**协程库**会把自己一些阻塞的操作重新封装为完全的非阻塞形式，然后在以前要阻塞的点上，主动让出自己，并通过某种方式通知或唤醒其他待执行的用户线程在该KSE上运行，从而避免了内核调度器由于KSE阻塞而做上下文切换，这样整个进程也不会被阻塞了。
 
-![moxing1](img/moxing1.jpg)
+<img src="../img/moxing1.jpg" alt="moxing1">
 
 优点： 这种模型的好处是线程上下文切换都发生在用户空间，避免的模态切换（mode switch），从而对于性能有积极的影响。
 
@@ -128,7 +128,7 @@ pthread create函数。拥有多个线程的进程可以并发执行多个任务
 
 用户线程与KSE是多对多关系(M:N)，这种实现综合了前两种模型的优点，为一个进程中创建多个KSE，并且线程可以与不同的KSE在运行时进行动态关联，当某个KSE由于其上工作的线程的阻塞操作被内核调度出CPU时，当前与其关联的其余用户线程可以重新与其他KSE建立关联关系。当然这种动态关联机制的实现很复杂，也需要用户自己去实现，这算是它的一个缺点吧。Go语言中的并发就是使用的这种实现方式，Go为了实现该模型自己实现了一个运行时调度器来负责Go中的"线程"与KSE的动态关联。此模型有时也被称为 **混合型线程模型**，**即用户调度器实现用户线程到KSE的“调度”，内核调度器实现KSE到CPU上的调度**。
 
-![moxing3](img/moxing3.jpg)
+<img src="../img/moxing3.jpg" alt="moxing3">
 
 
 
@@ -173,7 +173,7 @@ Go语言中支撑整个scheduler实现的主要有4个重要结构，分别是M�
 
 我们分别用三角形，矩形和圆形表示Machine Processor和Goroutine。
 
-![moxing4](img/moxing4.jpg)
+<img src="../img/moxing4.jpg" alt="moxing4">
 
 
 
@@ -187,7 +187,7 @@ Go语言中支撑整个scheduler实现的主要有4个重要结构，分别是M�
 
 在单核处理器的场景下，所有goroutine运行在同一个M系统线程中，每一个M系统线程维护一个Processor，任何时刻，一个Processor中只有一个goroutine，其他goroutine在runqueue中等待。一个goroutine运行完自己的时间片后，让出上下文，回到runqueue中。 多核处理器的场景下，为了运行goroutines，每个M系统线程会持有一个Processor。
 
-![moxing5](img/moxing5.jpg)
+<img src="../img/moxing5.jpg" alt="moxing5">
 
 
 
@@ -203,7 +203,7 @@ Go语言中支撑整个scheduler实现的主要有4个重要结构，分别是M�
 
 当正在运行的goroutine阻塞的时候，例如进行系统调用，会再创建一个系统线程（M1），当前的M线程放弃了它的Processor，P转到新的线程中去运行。
 
-![moxing6](img/moxing6.jpg)
+<img src="../img/moxing6.jpg" alt="moxing6">
 
 
 
@@ -211,7 +211,7 @@ Go语言中支撑整个scheduler实现的主要有4个重要结构，分别是M�
 
 当其中一个Processor的runqueue为空，没有goroutine可以调度。它会从另外一个上下文偷取一半的goroutine。
 
-![moxing7](img/moxing7.jpg)
+<img src="../img/moxing7.jpg" alt="moxing7">
 
 
 
@@ -231,7 +231,7 @@ Go运行时系统通过构造G-P-M对象模型实现了一套用户态的并发�
 
 可以看到Go的并发用起来非常简单，用了一个语法糖将内部复杂的实现结结实实的包装了起来。其内部可以用下面这张图来概述：
 
-![goroutine2](img/goroutine2.png)
+<img src="../img/goroutine2.png" alt="goroutine2">
 
 
 
@@ -272,7 +272,7 @@ func task1() {
 Package runtime contains operations that interact with Go's runtime system, such as functions to control goroutines. It also includes the low-level type information used by the reflect package; see reflect's documentation for the programmable interface to the run-time type system.
 ```
 
-![WX20190806-100406](img/WX20190806-100406.png)
+<img src="../img/WX20190806-100406.png" alt="WX20190806-100406">
 
 
 
@@ -352,7 +352,7 @@ func init(){
 }
 ```
 
-![WX20190806-103956](img/WX20190806-103956.png)
+<img src="../img/WX20190806-103956.png" alt="WX20190806-103956">
 
 
 
@@ -378,7 +378,7 @@ func main() {
 
 ```
 
-![WX20190806-104235](img/WX20190806-104235.png)
+<img src="../img/WX20190806-104235.png" alt="WX20190806-104235">
 
 
 
@@ -413,7 +413,7 @@ func fun() {
 }
 ```
 
-![WX20190806-105752](img/WX20190806-105752.png)
+<img src="../img/WX20190806-105752.png" alt="WX20190806-105752">
 
 
 
@@ -449,7 +449,7 @@ func main()  {
 
 我们通过终端命令来执行：
 
-![WX20190806-155844](img/WX20190806-155844.png)
+<img src="../img/WX20190806-155844.png" alt="WX20190806-155844">
 
 能够发现一处被多个goroutine共享的数据。
 
@@ -515,7 +515,7 @@ func saleTickets(name string) {
 
 我们为了更好的观察临界资源问题，每个goroutine先睡眠一个随机数，然后再售票，我们发现程序的运行结果，还可以卖出编号为负数的票。
 
-![WX20190806-160844](img/WX20190806-160844.png)
+<img src="../img/WX20190806-160844.png" alt="WX20190806-160844">
 
 
 
@@ -592,7 +592,7 @@ func saleTickets(name string) {
 
 运行结果：
 
-![WX20190806-162433](img/WX20190806-162433.png)
+<img src="../img/WX20190806-162433.png" alt="WX20190806-162433">
 
 
 
@@ -614,7 +614,7 @@ func saleTickets(name string) {
 Package sync provides basic synchronization primitives such as mutual exclusion locks. Other than the Once and WaitGroup types, most are intended for use by low-level library routines. Higher-level synchronization is better done via channels and communication.
 ```
 
-![WX20190807-101109](img/WX20190807-101109.png)
+<img src="../img/WX20190807-101109.png" alt="WX20190807-101109">
 
 
 
@@ -630,7 +630,7 @@ WaitGroup，同步等待组。
 
 在类型上，它是一个结构体。一个WaitGroup的用途是等待一个goroutine的集合执行完成。主goroutine调用了Add()方法来设置要等待的goroutine的数量。然后，每个goroutine都会执行并且执行完成后调用Done()这个方法。与此同时，可以使用Wait()方法来阻塞，直到所有的goroutine都执行完成。
 
-![WX20190807-101436](img/WX20190807-101436.png)
+<img src="../img/WX20190807-101436.png" alt="WX20190807-101436">
 
 ### 5.1.1 Add()方法：
 
@@ -639,7 +639,7 @@ Add这个方法，用来设置到WaitGroup的计数器的值。我们可以理�
 
 如果计数器的数值变为0，那么就表示等待时被阻塞的goroutine都被释放，如果计数器的数值为负数，那么就会引发恐慌，程序就报错了。
 
-![WX20190807-102137](img/WX20190807-102137.png)
+<img src="../img/WX20190807-102137.png" alt="WX20190807-102137">
 
 
 
@@ -647,7 +647,7 @@ Add这个方法，用来设置到WaitGroup的计数器的值。我们可以理�
 
 Done()方法，就是当WaitGroup同步等待组中的某个goroutine执行完毕后，设置这个WaitGroup的counter数值减1。
 
-![WX20190807-102843](img/WX20190807-102843.png)
+<img src="../img/WX20190807-102843.png" alt="WX20190807-102843">
 
 其实Done()的底层代码就是调用了Add()方法：
 
@@ -665,7 +665,7 @@ func (wg *WaitGroup) Done() {
 Wait()方法，表示让当前的goroutine等待，进入阻塞状态。一直到WaitGroup的计数器为零。才能解除阻塞，
 这个goroutine才能继续执行。
 
-![WX20190807-103015](img/WX20190807-103015.png)
+<img src="../img/WX20190807-103015.png" alt="WX20190807-103015">
 
 
 
@@ -721,7 +721,7 @@ func fun2()  {
 
 运行结果：
 
-![WX20190807-103748](img/WX20190807-103748.png)
+<img src="../img/WX20190807-103748.png" alt="WX20190807-103748">
 
 
 
@@ -778,7 +778,7 @@ Mutex 是最简单的一种锁类型，互斥锁，同时也比较暴力，当�
 在使用互斥锁时，一定要注意：对资源操作完成后，一定要解锁，否则会出现流程执行异常，死锁等问题。通常借助defer。锁定后，立即使用defer语句保证互斥锁及时解锁。
 
 
-![WX20190807-101436](img/WX20190808-092409.png)
+<img src="../img/WX20190808-092409.png" alt="WX20190807-101436">
 
 部分源码：
 
@@ -814,7 +814,7 @@ const (
 
 Lock()这个方法，锁定m。如果该锁已在使用中，则调用goroutine将阻塞，直到互斥体可用。
 
-![WX20190807-102137](img/WX20190808-104517.png)
+<img src="../img/WX20190808-104517.png" alt="WX20190807-102137">
 
 
 
@@ -824,7 +824,7 @@ Unlock()方法，解锁解锁m。如果m未在要解锁的条目上锁定，则�
 
 锁定的互斥体不与特定的goroutine关联。允许一个goroutine锁定互斥体，然后安排另一个goroutine解锁互斥体。
 
-![WX20190807-102843](img/WX20190808-104744.png)
+<img src="../img/WX20190808-104744.png" alt="WX20190807-102843">
 
 
 
@@ -895,7 +895,7 @@ func saleTickets(name string){
 
 运行结果：
 
-![WX20190807-103748](img/WX20190808-153743.png)
+<img src="../img/WX20190808-153743.png" alt="WX20190807-103748">
 
 
 
@@ -939,7 +939,7 @@ RWMutex是读/写互斥锁。锁可以由任意数量的读取器或单个编写
 如果一个goroutine持有一个rRWMutex进行读取，而另一个goroutine可能调用lock，那么在释放初始读取锁之前，任何goroutine都不应该期望能够获取读取锁。特别是，这禁止递归读取锁定。这是为了确保锁最终可用；被阻止的锁调用会将新的读卡器排除在获取锁之外。
 
 
-![WX20190807-101436](img/WX20190808-160432.png)
+<img src="../img/WX20190808-160432.png" alt="WX20190807-101436">
 
 
 
@@ -971,7 +971,7 @@ func (rw *RWMutex) RLock()
 
 读锁，当有写锁时，无法加载读锁，当只有读锁或者没有锁时，可以加载读锁，读锁可以加载多个，所以适用于“读多写少”的场景。
 
-![WX20190807-102843](img/WX20190809-101020.png)
+<img src="../img/WX20190809-101020.png" alt="WX20190807-102843">
 
 
 
@@ -987,7 +987,7 @@ func (rw *RWMutex) RUnlock()
 
 
 
-![WX20190807-102843](img/WX20190809-101051.png)
+<img src="../img/WX20190809-101051.png" alt="WX20190807-102843">
 
 
 
@@ -1001,7 +1001,7 @@ func (rw *RWMutex) Lock()
 
 写锁，如果在添加写锁之前已经有其他的读锁和写锁，则Lock就会阻塞直到该锁可用，为确保该锁最终可用，已阻塞的Lock调用会从获得的锁中排除新的读取锁，即写锁权限高于读锁，有写锁时优先进行写锁定。
 
-![WX20190807-102137](img/WX20190809-100627.png)
+<img src="../img/WX20190809-100627.png" alt="WX20190807-102137">
 
 
 
@@ -1013,7 +1013,7 @@ func (rw *RWMutex) Unlock()
 
 写锁解锁，如果没有进行写锁定，则就会引起一个运行时错误。
 
-![WX20190807-102843](img/WX20190809-100753.png)
+<img src="../img/WX20190809-100753.png" alt="WX20190807-102843">
 
 
 
@@ -1086,7 +1086,7 @@ func readData(i int) {
 
 运行结果：
 
-![WX20190807-103748](img/WX20190809-112822.png)
+<img src="../img/WX20190809-112822.png" alt="WX20190807-103748">
 
 
 
