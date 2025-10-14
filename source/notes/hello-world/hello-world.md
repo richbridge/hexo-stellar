@@ -6,7 +6,7 @@ subtitle: I'm coming!
 tags: ["建站"]
 ---
 
-<img src="./images/lunyu.jpg">
+<img src="../images/lunyu.jpg">
 
 ## 引入主题及组件
 ```git
