@@ -1,9 +1,9 @@
-name: cta
-title: 税务师
-icon: /notes/cta/china certified tax agents association.png
-description: 税务师
+name: hello world
+title: 世界，您好
+icon: /notes/hello-world/images/lunyu.jpg
+description: 哇哦来了！
 
-base_dir: /notes/cta/
+base_dir: /notes/hello-world/
 
 sort: 1
 per_page: 10
