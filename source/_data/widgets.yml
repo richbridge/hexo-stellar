@@ -64,3 +64,314 @@ notebooks_list:
     - icon: '<svg...></svg>' # 或者 icons.yml 中设置的 icon 名称
       title: 关于本站
       url: /about/
+
+
+# 杜老师说网站组件
+# welcome:
+#   layout: linklist
+#   title: 导航
+#   columns: 1
+#   items:
+#     - icon: solar:folder-with-files-line-duotone
+#       title: 友情链接
+#       url: /friends/
+#     - icon: solar:refresh-circle-broken
+#       title: 友链文章
+#       url: /fcircle/
+#     - icon: solar:letter-unread-bold-duotone
+#       title: 访客留言
+#       url: /about/
+#     - icon: solar:chat-square-check-line-duotone
+#       title: 说说广场
+#       url: /shuoshuo/
+
+sylj:
+  layout: linklist
+  title: 首页链接
+  columns: 1
+  items:
+    - title: 贝贝吧
+      url: https://www.hibbba.com/
+    - title: 淇云博客
+      url: https://www.pengqi.club/
+    - title: 陈冬冬博客
+      url: https://www.chendd.cn/
+    - title: 牛魔博客
+      url: https://www.nmwbk.com/
+
+sjtp:
+  layout: markdown
+  title: 随机图片
+  content: |
+    ![](https://birdteam.net/baisi.php)
+
+sffw:
+  layout: markdown
+  title: 收费服务
+  content: |
+    [![](https://cdn.dusays.com/sffw.gif)](https://dusays.com/sffw/)
+
+qbtc:
+  layout: markdown
+  title: 去不图床
+  content: |
+    [![](https://cdn.dusays.com/7bu.jpg)](https://7bu.top/)
+
+ltgc:
+  layout: markdown
+  title: 聊天广场
+  content: |
+    [![](https://cdn.dusays.com/chat.jpg)](https://chat.dusays.com/signup_user_complete/?id=pmsp46j6ji8xdpket1pohptpnr&md=link&sbr=fa)
+
+mmtg:
+  layout: markdown
+  title: 密码托管
+  content: |
+    [![](https://cdn.dusays.com/bw.jpg)](https://bw.dusays.com/)
+
+wezh:
+  layout: linklist
+  columns: 2
+  items:
+    - icon: solar:checklist-minimalistic-outline
+      title: 近期
+      url: /
+    - icon: solar:clapperboard-text-outline
+      title: 分类
+      url: /categories/
+    - icon: solar:hashtag-square-outline
+      title: 标签
+      url: /tags/
+    - icon: solar:archive-minimalistic-outline
+      title: 归档
+      url: /archives/
+
+recent_comments:
+  layout: markdown
+  title: 近期评论
+  content: |
+    <div id="recent-comments" style="margin-top: 10px;">
+      <!-- 加载按钮容器 -->
+      <div class="linklist center" style="grid-template-columns: repeat(1, 1fr); margin-bottom: 10px;" id="loadButtonContainer">
+        <a class="link" title="加载评论" href="javascript:void(0);" id="loadingBtn">
+          <div class="flex">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+              <g fill="none">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"></circle>
+                <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M12 17v-6"></path>
+                <circle cx="1" cy="1" r="1" fill="currentColor" transform="matrix(1 0 0 -1 11 9)"></circle>
+              </g>
+            </svg>
+            <span>加载评论中...</span>
+          </div>
+        </a>
+      </div>
+      <div id="recent-comments-list"></div>
+    </div>
+
+    <style>
+      #recent-comments-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      #recent-comments-list .comment-card:first-child {
+        margin-top: 8px;
+      }
+
+      #recent-comments-list .comment-card:last-child {
+        margin-bottom: 8px;
+      }
+
+      .comment-card {
+        display: flex;
+        align-items: center;
+        padding: 8px 12px;
+        background: var(--block);
+        border-radius: 12px;
+        cursor: pointer;
+        user-select: none;
+        transition: background 0.3s;
+      }
+
+      .comment-card:hover {
+        background: var(--bg-a20);
+      }
+
+      .comment-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        overflow: hidden;
+        flex-shrink: 0;
+      }
+
+      .comment-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .comment-body {
+        flex: 1;
+        margin-left: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-width: 0;
+      }
+
+      .comment-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: var(--fsp);
+        color: var(--text-p1);
+        width: 100%;
+        min-width: 0;
+      }
+
+      .comment-nick {
+        font-weight: 600;
+        color: var(--text-p1);
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+
+      .comment-time {
+        font-size: calc(var(--fsp) * 0.85);
+        color: var(--text-p3);
+        white-space: nowrap;
+        flex-shrink: 0;
+        margin-left: 12px;
+      }
+
+      .comment-content {
+        font-size: var(--fsp);
+        color: var(--text-p2);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-top: 4px;
+        width: 100%;
+        min-width: 0;
+      }
+
+      .comment-content a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .comment-content a:hover {
+        text-decoration: underline;
+      }
+    </style>
+
+    <script>
+      const API_BASE = 'https://artalk.dusays.com/api/v2';
+      const SITE_NAME = '杜老师说';
+      const LIMIT = 6;
+
+      function timeAgo(dateString) {
+        const time = new Date(dateString.replace(' ', 'T'));
+        const now = new Date();
+        const seconds = Math.floor((now - time) / 1000);
+
+        const intervals = [
+          { label: '年', seconds: 31536000 },
+          { label: '个月', seconds: 2592000 },
+          { label: '天', seconds: 86400 },
+          { label: '小时', seconds: 3600 },
+          { label: '分钟', seconds: 60 },
+          { label: '秒', seconds: 1 }
+        ];
+
+        for (const interval of intervals) {
+          const count = Math.floor(seconds / interval.seconds);
+          if (count > 0) {
+            return `${count}${interval.label}前`;
+          }
+        }
+        return '刚刚';
+      }
+
+      function getAvatarUrl(emailEncrypted) {
+        return `https://cdn.sep.cc/avatar/${emailEncrypted}?s=80&d=identicon`;
+      }
+
+      async function loadRecentComments() {
+        const btn = document.getElementById('loadingBtn');
+        const btnContainer = document.getElementById('loadButtonContainer');
+        const list = document.getElementById('recent-comments-list');
+
+        const svgIcon = `
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+            <g fill="none">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"></circle>
+              <path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M12 17v-6"></path>
+              <circle cx="1" cy="1" r="1" fill="currentColor" transform="matrix(1 0 0 -1 11 9)"></circle>
+            </g>
+          </svg>
+        `;
+
+        // 更新按钮为加载中状态
+        btn.innerHTML = `${svgIcon}<span>加载评论中...</span>`;
+        btn.removeAttribute('style'); // 移除按钮样式
+        btn.style.pointerEvents = 'none'; // 仅保留功能所需的样式
+
+        try {
+          const url = `${API_BASE}/stats/latest_comments?site_name=${SITE_NAME}&limit=${LIMIT}`;
+          const res = await fetch(url);
+          const json = await res.json();
+          const comments = json.data || [];
+
+          if (comments.length === 0) {
+            // 暂无评论状态
+            list.innerHTML = '';
+            btn.innerHTML = `${svgIcon}<span>暂无评论</span>`;
+            btn.removeAttribute('style'); // 移除按钮样式
+            btn.style.pointerEvents = 'none'; // 仅保留功能所需的样式
+          } else {
+            // 加载成功，渲染评论列表
+            list.innerHTML = comments.map(c => {
+              const timeText = timeAgo(c.date);
+              const avatarUrl = getAvatarUrl(c.email_encrypted);
+              const pageLink = `${c.page_url}#atk-comment-${c.id}`;
+              const contentPreview = c.content.replace(/<[^>]+>/g, '').slice(0, 60);
+
+              return `
+                <div class="comment-card" onclick="window.open('${pageLink}', '_blank')">
+                  <div class="comment-avatar">
+                    <img src="${avatarUrl}" alt="头像" />
+                  </div>
+                  <div class="comment-body">
+                    <div class="comment-header">
+                      <span class="comment-nick">${c.nick || '匿名'}</span>
+                      <span class="comment-time" title="${c.date}">${timeText}</span>
+                    </div>
+                    <div class="comment-content">
+                      <a href="${pageLink}" target="_blank" rel="noopener">${contentPreview}</a>
+                    </div>
+                  </div>
+                </div>
+              `;
+            }).join('');
+            // 隐藏按钮容器
+            btnContainer.style.display = 'none';
+          }
+
+        } catch (err) {
+          console.error(err);
+          // 加载失败状态
+          btn.innerHTML = `${svgIcon}<span>加载失败，点击重试</span>`;
+          btn.removeAttribute('style'); // 移除按钮样式
+          btn.onclick = () => {
+            btn.onclick = null; // 防止重复点击
+            loadRecentComments();
+          };
+          list.innerHTML = '';
+        }
+      }
+      loadRecentComments();
+    </script>

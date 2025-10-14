@@ -89,3 +89,25 @@ API 不兼容，吐了🤮，升级还是蛮难受的。
 [![十年之约](https://www.foreverblog.cn/favicon.ico)](https://www.foreverblog.cn/about.html)
 
 ![在下真名](https://s2.ax1x.com/2019/07/02/ZJ7KAO.gif)
+
+
+
+
+
+
+
+全站链接：
+
+{% friends quanzhan %}
+
+内页链接：
+
+{% friends neiye %}
+
+{% radio checked:true 简单总结一下友链规则： %}
+
+{% checkbox checked:true 希望您不要第一次前往本站就留下友链的申请，评论数低于 10 次还请高抬贵手勿申请； %}
+
+{% checkbox symbol:plus color:green checked:true 原则上需已建立一年及以上，并已有 30 篇及以上文章。不得含有违反中国大陆相关法律法规内容； %}
+
+{% checkbox symbol:minus color:yellow checked:true 博客停止更新长达 6 个月及以上，请勿申请友链，这里以最后的一篇博文更新时间为主。 %}
