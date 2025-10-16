@@ -101,6 +101,11 @@ inject:
   head:
     - <script defer src="https://umami.252262.xyz/script.js" data-website-id="58a7e179-388d-4ede-b2b2-2ee0ce84fe39"></script>
 
+feed:
+  enable: true
+  type: atom
+  path: atom.xml
+
 ## Themes: https://hexo.io/themes/
 theme: stellar
 
