@@ -2,7 +2,7 @@
 
 echo -e "-------------------- 开始部署 --------------------"
 
-git submodule update --remote --merge source/_posts
+# git submodule update --remote --merge source/_posts
 # git submodule update --remote --merge themes/stellar
 
 echo -e "------------------- 子模块更新完成 -------------------"
