@@ -332,13 +332,13 @@ footer:
   social:
     github:
       icon: '<img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/08a41b181ce68.svg"/>'
-      url: /
+      url: https://github.com/richbridge
     music:
       icon: '<img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/3845874.svg"/>'
-      url: /
-    unsplash:
+      url: https://music.163.com/#/user/home?id=8546224393
+    mail:
       icon: '<img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/3616429.svg"/>'
-      url: /
+      url: mailto:richffan@outlook.com
     comments:
       icon: '<img src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/942ebbf1a4b91.svg"/>'
       url: /about/#comments
