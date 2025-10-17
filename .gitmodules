@@ -1,3 +1,6 @@
 [submodule "themes/stellar"]
 	path = themes/stellar
 	url = https://github.com/xaoxuu/hexo-theme-stellar.git
+[submodule "source/_posts"]
+	path = source/_posts
+	url = https://gitee.com/richfan/posts.git
