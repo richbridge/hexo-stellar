@@ -4,6 +4,7 @@ menu_id: notes
 title: Hello World
 subtitle: I'm coming!
 tags: ["建站"]
+leftbar: notebook_hello_tree
 ---
 
 <img src="../images/lunyu.jpg">

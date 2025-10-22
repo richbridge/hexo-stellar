@@ -27,19 +27,19 @@ tagcloud:
   end_color:  # 结束的颜色。您可使用十六进位值（'#b700ff'），rgba（rgba(183, 0, 255, 1)），hsla（hsla(283, 100%, 50%, 1)）或 颜色关键字。此变量仅在 color 参数开启时才有用。
   show_count: false # 显示每个标签的文章总数
 
-sociallist:
-  layout: linklist
-  columns: 1 
-  items:
-    - icon: 'solar:friends' # 或者 icons.yml 中设置的 icon 名称
-      title: 友情链接
-      url: /friends/
-    - icon: 'solar:fcircle' # 或者 icons.yml 中设置的 icon 名称
-      title: 友链文章
-      url: /fcircle/
-    - icon: 'solar:about' # 或者 icons.yml 中设置的 icon 名称
-      title: 关于本站
-      url: /about/
+# sociallist:
+#   layout: linklist
+#   columns: 1 
+#   items:
+#     - icon: 'solar:friends' # 或者 icons.yml 中设置的 icon 名称
+#       title: 友情链接
+#       url: /friends/
+#     - icon: 'solar:fcircle' # 或者 icons.yml 中设置的 icon 名称
+#       title: 友链文章
+#       url: /fcircle/
+#     - icon: 'solar:about' # 或者 icons.yml 中设置的 icon 名称
+#       title: 关于本站
+#       url: /about/
 
 welcome:
   layout: markdown
@@ -70,23 +70,23 @@ notebooks_list:
 
 
 # 杜老师说网站组件
-# welcome:
-#   layout: linklist
-#   title: 导航
-#   columns: 1
-#   items:
-#     - icon: solar:folder-with-files-line-duotone
-#       title: 友情链接
-#       url: /friends/
-#     - icon: solar:refresh-circle-broken
-#       title: 友链文章
-#       url: /fcircle/
-#     - icon: solar:letter-unread-bold-duotone
-#       title: 访客留言
-#       url: /about/
-#     - icon: solar:chat-square-check-line-duotone
-#       title: 说说广场
-#       url: /shuoshuo/
+sociallist:
+  layout: linklist
+  title: 导航
+  columns: 1
+  items:
+    - icon: solar:folder-with-files-line-duotone
+      title: 友情链接
+      url: /friends/
+    - icon: solar:refresh-circle-broken
+      title: 友链文章
+      url: /fcircle/
+    - icon: solar:letter-unread-bold-duotone
+      title: 访客留言
+      url: /about/
+    - icon: solar:chat-square-check-line-duotone
+      title: 说说广场
+      url: /shuoshuo/
 
 sylj:
   layout: linklist

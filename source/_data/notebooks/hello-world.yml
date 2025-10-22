@@ -13,3 +13,7 @@ share: true
 
 leftbar: notebooks_list, tree, tagtree, related, recent # recent of current notebook
 rightbar: welcome
+
+
+notebook_hello_tree:
+  - hello-world
