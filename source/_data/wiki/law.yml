@@ -1,0 +1,17 @@
+name: law
+title: 法律职业资格考试
+subtitle: '每个人的独立博客 | Designed by xaoxuu'
+tags: 法律职业资格考试
+icon: https://cdn.jsdelivr.net/gh/richbridge/picx-images-hosting@master/icon/Law.svg
+cover: https://cdn.jsdelivr.net/gh/richbridge/picx-images-hosting@master/icon/Law.svg
+description: 法律职业资格考试归纳总结文档。
+repo: richbridge/richbridge
+search:
+  filter: /wiki/law/
+  placeholder: 在 法律职业资格考试 中搜索...
+leftbar: 
+  - tree
+base_dir: /wiki/law/
+tree:
+  '快速开始':
+    - index # 会被关联到 /wiki/cpa/index.md

@@ -2,8 +2,8 @@ name: cpa
 title: 注册会计师
 subtitle: '每个人的独立博客 | Designed by xaoxuu'
 tags: 注册会计师
-icon: https://res.xaox.cc/gh/cdn-x/wiki@main/stellar/icon.svg
-cover: https://res.xaox.cc/gh/cdn-x/wiki@main/stellar/icon.svg
+icon: https://cdn.jsdelivr.net/gh/richbridge/picx-images-hosting@master/icon/cpa.svg
+cover: https://cdn.jsdelivr.net/gh/richbridge/picx-images-hosting@master/icon/cpa.svg
 description: 注册会计师归纳总结文档。
 repo: richbridge/richbridge
 search:

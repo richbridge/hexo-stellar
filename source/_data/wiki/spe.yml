@@ -1,0 +1,17 @@
+name: spe
+title: 系统规划工程师
+subtitle: '每个人的独立博客 | Designed by xaoxuu'
+tags: 系统规划工程师
+icon: https://cdn.jsdelivr.net/gh/richbridge/picx-images-hosting@master/icon/spe.svg
+cover: https://cdn.jsdelivr.net/gh/richbridge/picx-images-hosting@master/icon/spe.svg
+description: 系统规划工程师 归纳总结文档。
+repo: richbridge/richbridge
+search:
+  filter: /wiki/spe/
+  placeholder: 在 系统规划工程师 中搜索...
+leftbar: 
+  - tree
+base_dir: /wiki/spe/
+tree:
+  '快速开始':
+    - index # 会被关联到 /wiki/cpa/index.md

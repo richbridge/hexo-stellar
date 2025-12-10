@@ -1,0 +1,17 @@
+name: cse
+title: 注册安全工程师
+subtitle: '每个人的独立博客 | Designed by xaoxuu'
+tags: 注册安全工程师
+icon: https://cdn.jsdelivr.net/gh/richbridge/picx-images-hosting@master/icon/cse.svg
+cover: https://cdn.jsdelivr.net/gh/richbridge/picx-images-hosting@master/icon/cse.svg
+description: 注册安全工程师归纳总结文档。
+repo: richbridge/richbridge
+search:
+  filter: /wiki/cse/
+  placeholder: 在 注册安全工程师 中搜索...
+leftbar: 
+  - tree
+base_dir: /wiki/cse/
+tree:
+  '快速开始':
+    - index # 会被关联到 /wiki/cpa/index.md
