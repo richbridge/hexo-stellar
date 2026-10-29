@@ -2,3 +2,7 @@
 	path = themes/stellar
 	url = https://github.com/xaoxuu/hexo-theme-stellar.git
 	branch = main
+[submodule "source/_posts/blog"]
+	path = source/_posts/blog
+	url = https://gitee.com/richfan/posts.git
+	branch = main

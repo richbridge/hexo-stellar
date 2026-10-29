@@ -1,0 +1,8 @@
+name: 城市漫游
+tagline: 用脚步认识一座城
+route:
+  path: /topic/journey/
+listing:
+  sort:
+    field: date
+    direction: asc

@@ -1,0 +1,7 @@
+name: 使用手册
+route:
+  path: /wiki/handbook/
+navigation:
+  tree:
+    开始使用:
+      - index

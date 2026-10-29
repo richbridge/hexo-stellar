@@ -16,13 +16,13 @@ topbar:
     # 配置品牌图片。
     image:
       # 设置品牌图片地址；null 表示隐藏图片。
-      src: null
+      src: https://files.seeusercontent.com/2026/03/16/xoG7/favicon.ico
       # 设置品牌图片形态；可选值为 avatar、icon 或 plain。
       variant: avatar
     # 设置品牌名称；null 表示隐藏名称且不继承 Hexo title。
-    name: null
+    name: RichFan
     # 设置品牌标语；null 表示隐藏标语且不继承 Hexo subtitle。
-    tagline: null
+    tagline: 红尘湮灭，岁月无声
     # 设置品牌链接。
     href: /
   # 设置 Topbar 菜单项；数组会整体替换，空数组表示不显示菜单项。
@@ -45,17 +45,17 @@ leftbar:
     # 设置 Brand 数据区的 GitHub 仓库（owner/repo）；留空不显示仓库统计。
     ghrepo: null
     # 设置 Brand 数据区的 GitHub 用户名；未设置 ghrepo 时使用，留空不显示。
-    ghuser: null
+    ghuser: richbridge
     # 配置品牌图片。
     image:
       # 设置品牌图片地址；null 表示隐藏图片。
-      src: null
+      src: https://files.seeusercontent.com/2026/03/11/k9Vb/avatar.jpg
       # 设置品牌图片形态；可选值为 avatar、icon 或 plain。
       variant: avatar
     # 设置品牌名称；null 表示隐藏名称且不继承 Hexo title。
-    name: null
+    name: RichFan
     # 设置品牌标语；null 表示隐藏标语且不继承 Hexo subtitle。
-    tagline: null
+    tagline: 红尘湮灭，岁月无声
     # 设置品牌链接。
     href: /
   # 设置 Leftbar 菜单列数（1–5）；1–2 列显示图标与标题，3–5 列仅显示居中的图标。
@@ -71,37 +71,37 @@ leftbar:
       # 设置菜单链接。
       url: /
     # 声明默认的分类入口。
-    - id: categories
+    - id: notebooks
       # 设置菜单标题，支持主题 i18n 键。
-      title: menu.categories
+      title: 笔记
       # 设置菜单图标。
-      icon: default:category
+      icon: default:notebook
       # 设置菜单链接。
-      url: /blog/categories/
+      url: /notebooks/
     # 声明默认的标签入口。
-    - id: tags
+    - id: wiki
       # 设置菜单标题，支持主题 i18n 键。
-      title: menu.tags
-      # 设置菜单图标。
-      icon: default:hashtag
-      # 设置菜单链接。
-      url: /blog/tags/
-    # 声明默认的专栏入口。
-    - id: topic
-      # 设置菜单标题，支持主题 i18n 键。
-      title: menu.topic
+      title: WIKI
       # 设置菜单图标。
       icon: default:pin
       # 设置菜单链接。
-      url: /topic/
-    # 声明默认的归档入口。
-    - id: archives
+      url: /wiki/
+    # 声明默认的专栏入口。
+    # - id: topic
       # 设置菜单标题，支持主题 i18n 键。
-      title: menu.archives
+      # title: menu.topic
       # 设置菜单图标。
-      icon: default:calendar
+      # icon: default:pin
       # 设置菜单链接。
-      url: /blog/archives/
+      # url: /topic/
+    # 声明默认的归档入口。
+    # - id: archives
+      # 设置菜单标题，支持主题 i18n 键。
+      # title: menu.archives
+      # 设置菜单图标。
+      # icon: default:calendar
+      # 设置菜单链接。
+      # url: /blog/archives/
     # 声明默认的友链入口。
     - id: friends
       # 设置菜单标题，支持主题 i18n 键。
@@ -184,7 +184,7 @@ profiles:
       # 控制是否显示主页评论区。
       enabled: false
       # 设置主页评论区标题；null 表示使用默认标题。
-      title: null
+      title: 樊笼
       # 设置主页评论线程标识；null 表示由页面上下文决定。
       id: null
       # 设置主页专用评论 Provider；null 表示使用全局 Provider。
@@ -494,9 +494,9 @@ article:
     share:
       - qrcode
       - weibo
-      - x
-      - telegram
-      - whatsapp
+      # - x
+      # - telegram
+      # - whatsapp
       - email
     # 控制文章页页脚是否显示标签。
     show_tags: true
@@ -508,7 +508,7 @@ article:
 # 配置主题的视觉外观。
 appearance:
   # 设置外观预设；可选值为 card、glass、minimal 或 flat。
-  preset: card
+  preset: minimal
   # 设置配色模式；可选值为 auto、light 或 dark。
   color_scheme: auto
 
